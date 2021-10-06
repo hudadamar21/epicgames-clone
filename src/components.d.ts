@@ -4,15 +4,22 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
+    AddIcon: typeof import('D:/HartD/Programing/Web Project/Slicing/epicegame-store-clone/src/components/icons/AddIcon.vue')['default']
     ArrowUp: typeof import('D:/HartD/Programing/Web Project/Slicing/epicegame-store-clone/src/components/icons/ArrowUp.vue')['default']
+    BaseButton: typeof import('D:/HartD/Programing/Web Project/Slicing/epicegame-store-clone/src/components/atom/BaseButton.vue')['default']
+    Discover: typeof import('D:/HartD/Programing/Web Project/Slicing/epicegame-store-clone/src/components/organism/Discover.vue')['default']
     EpicGames: typeof import('D:/HartD/Programing/Web Project/Slicing/epicegame-store-clone/src/components/icons/EpicGames.vue')['default']
     Facebook: typeof import('D:/HartD/Programing/Web Project/Slicing/epicegame-store-clone/src/components/icons/Facebook.vue')['default']
     Footer: typeof import('D:/HartD/Programing/Web Project/Slicing/epicegame-store-clone/src/components/organism/Footer.vue')['default']
     Globe: typeof import('D:/HartD/Programing/Web Project/Slicing/epicegame-store-clone/src/components/icons/Globe.vue')['default']
+    HighlightGame: typeof import('D:/HartD/Programing/Web Project/Slicing/epicegame-store-clone/src/components/molecules/HighlightGame.vue')['default']
+    HighlightGameList: typeof import('D:/HartD/Programing/Web Project/Slicing/epicegame-store-clone/src/components/molecules/HighlightGameList.vue')['default']
+    HighlistGameList: typeof import('./components/molecules/HighlightGameList.vue')['default']
     Home: typeof import('D:/HartD/Programing/Web Project/Slicing/epicegame-store-clone/src/components/Home.vue')['default']
     MainLayout: typeof import('D:/HartD/Programing/Web Project/Slicing/epicegame-store-clone/src/components/layouts/MainLayout.vue')['default']
     MenuItem: typeof import('D:/HartD/Programing/Web Project/Slicing/epicegame-store-clone/src/components/atom/MenuItem.vue')['default']
     Navbar: typeof import('D:/HartD/Programing/Web Project/Slicing/epicegame-store-clone/src/components/organism/Navbar.vue')['default']
+    Search: typeof import('D:/HartD/Programing/Web Project/Slicing/epicegame-store-clone/src/components/icons/Search.vue')['default']
     Twitter: typeof import('D:/HartD/Programing/Web Project/Slicing/epicegame-store-clone/src/components/icons/Twitter.vue')['default']
     UnrealEngine: typeof import('D:/HartD/Programing/Web Project/Slicing/epicegame-store-clone/src/components/icons/UnrealEngine.vue')['default']
     User: typeof import('D:/HartD/Programing/Web Project/Slicing/epicegame-store-clone/src/components/icons/User.vue')['default']

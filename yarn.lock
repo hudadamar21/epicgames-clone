@@ -62,6 +62,11 @@
   resolved "https://registry.yarnpkg.com/@emmetio/scanner/-/scanner-1.0.0.tgz#065b2af6233fe7474d44823e3deb89724af42b5f"
   integrity sha512-8HqW8EVqjnCmWXVpqAOZf+EGESdkR27odcMMMGefgKXtar00SoYNSryGv//TELI4T3QFsECo78p+0lmalk/CFA==
 
+"@headlessui/vue@^1.4.1":
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/@headlessui/vue/-/vue-1.4.1.tgz#bc1a37d3180eeeae28ad467f020c2dfdc8d43645"
+  integrity sha512-yLgpqxJGdGw+ylouZfxxuXXBqCWRZq+Jh1jb23cXQIuAngbisN5BlSO8pPpvKOvk6hXr8dx9bPohSn45cbIIHw==
+
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz#7619c2eb21b25483f6d167548b4cfd5a7488c3d5"

@@ -6,9 +6,9 @@
   <footer class="px-5 md:px-14 lg:px-20 bg-epic-gray-200 py-10 text-sm">
     <div class="flex items-center justify-between mb-8">
       <div class="flex items-center gap-2">
-        <Facebook class="h-9 w-9 text-white/70 hover:text-epic-blue transition duration-200" />
-        <Twitter class="h-9 w-9 text-white/70 hover:text-epic-blue transition duration-200" />
-        <Youtube class="h-9 w-9 text-white/70 hover:text-epic-blue transition duration-200" />
+        <Facebook class="social-link" />
+        <Twitter class="social-link" />
+        <Youtube class="social-link" />
       </div>
       <a href="#" class="border-2 border-white/70 text-white/70 hover:border-epic-blue hover:text-epic-blue transition duration-200 cursor-pointer">
         <ArrowUp class="h-5 w-5 m-1.5 mt-2 mb-0.5"/>
@@ -38,6 +38,9 @@
 
 <style>
   .menuitem {
-    @apply mb-1 hover:text-epic-blue cursor-pointer transition
+    @apply mb-1 hover:text-epic-blue cursor-pointer transition;
+  }
+  .social-link {
+    @apply h-9 w-9 text-white/70 hover:text-epic-blue transition duration-200 cursor-pointer;
   }
 </style>

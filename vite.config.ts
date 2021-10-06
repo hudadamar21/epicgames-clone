@@ -4,11 +4,11 @@ import Components from 'unplugin-vue-components/vite'
 
 export default {
     resolve: {
-        alias: [
+        alias: [ 
             {find: "@", replacement: path.resolve(__dirname, 'src')}
         ],
     }, 
-    plugins: [
+    plugins: [  
         vue(),
         Components({ 
             dts: 'src/components.d.ts',

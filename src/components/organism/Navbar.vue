@@ -1,5 +1,5 @@
 <template>
-  <nav class="fixed h-14 bg-epic-gray-100 w-full flex justify-between text-white text-[0.7rem]">
+  <nav class="fixed h-14 bg-epic-gray-100 w-full flex justify-between text-white text-[0.7rem] font-medium z-20 select-none">
     <div class="flex gap-5 pl-5">
       <div class="h-full flex items-center opacity-80 hover:opacity-100 transition duration-200 cursor-pointer">
         <EpicGames class="w-9 h-9"/>

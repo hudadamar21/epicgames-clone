@@ -9,10 +9,19 @@ module.exports = {
         DEFAULT: '1rem',
         sm: '2rem',
         lg: '6rem',
-        xl: '10rem',
+        xl: '9rem',
       },
     },
     extend: {
+      inset: {
+        '13': '3.25rem'
+      },
+      height: {
+        '13': '3.25rem'
+      },
+      padding: {
+        '13': '3.25rem'
+      },
       colors: {
         epic: {
           black: '#121212',

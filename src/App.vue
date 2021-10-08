@@ -4,9 +4,9 @@
 
 <template>
   <MainLayout>
-    <main class="py-14 container">
+    <main class="py-13 md:ml-6 container">
       <TabGroup>
-        <TabList class="sticky top-14 h-24 flex items-center justify-between bg-epic-black/90 backdrop-blur z-10">
+        <TabList class="sticky top-13 h-24 flex items-center justify-between bg-epic-black/90 backdrop-blur z-10">
           <div class="text-white text-sm flex items-center gap-5">
             <Tab v-slot="{ selected }" as="template">
               <button :class="!selected && 'opacity-40'">
@@ -20,7 +20,10 @@
             </Tab>
           </div>
           <div>
-            <div class="flex items-center gap-3 text-white/80">
+            <button class="md:hidden text-white/80">
+              <Search class="w-6 h-6"/>
+            </button>
+            <div class="hidden md:flex items-center gap-3 text-white/80">
               <div class="pl-3 absolute top-1/2 -translate-y-1/2">
                 <Search/>
               </div>

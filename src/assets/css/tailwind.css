@@ -18,7 +18,7 @@
 
 @layer utilities {
   .shadow-top {
-    box-shadow: 10px 0 20px rgba(0, 0, 0, .8);
+    box-shadow: 5px 0 15px rgba(0, 0, 0, .5);
   }
   .ar-1 {
     aspect-ratio: 1/1;

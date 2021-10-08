@@ -22,7 +22,7 @@
       <div class="
         shadow-top md:shadow-none 
         flex flex-col md:flex-row 
-        text-xxs 
+        text-[8.75px]
         w-full md:w-auto 
         border-t md:border-none border-white/10 
         h-[6.5rem] md:h-auto
@@ -44,11 +44,11 @@
             flex-centered 
             h-full w-2/3 md:w-auto 
             opacity-70 hover:opacity-100 
-            px-5 gap-5 md:gap-2 
-            tracking-wider 
+            px-5 gap-5 md:gap-3 
+            tracking-widest font-semibold
             border-r border-white/10 md:border-none
           ">
-            <User class="w-6 h-6"/>
+            <User class="w-7 md:w-5 h-7 md:h-5"/>
             SIGN IN
           </a>
         </div>
@@ -68,7 +68,7 @@
   .nav-container {
     @apply 
       fixed flex
-      h-14 w-full 
+      h-13 w-full 
       bg-epic-gray-100 text-white
       text-[0.7rem] font-medium 
       z-20 select-none;
@@ -79,7 +79,7 @@
       flex items-center 
       opacity-80 hover:opacity-100 
       transition duration-200 
-      z-10 h-full pl-5 cursor-pointer;
+      z-10 h-full pl-4 cursor-pointer;
   }
   .nav-menu {
     @apply 
@@ -96,16 +96,16 @@
     @apply 
       flex flex-col md:flex-row 
       uppercase 
-      text-xs md:text-xxs 
+      text-xs md:text-[10.5px] font-normal
       divide-y md:divide-none divide-white/5;
   }
   .get-epic-games-button {
     @apply 
       flex items-center justify-center 
-      px-5 pt-1 md:pt-0
-      bg-epic-blue 
+      px-6 pt-1 md:pt-0
+      bg-epic-blue font-semibold
       bg-opacity-90 hover:bg-opacity-100 
-      h-full tracking-wider;
+      h-full tracking-widest;
   }
   .toggle-button {
     @apply 

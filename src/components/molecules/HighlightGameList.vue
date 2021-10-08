@@ -11,7 +11,7 @@
     'hightlight-game-list',
     selected ? 'bg-epic-gray-100' : ''
   ]">
-    <img :src="image" class="w-12 bg-epic-blue rounded-lg h-full object-cover select-none" alt="cover-game" />
+    <img :src="image" class="w-12 bg-epic-blue rounded-lg h-14 md:h-full object-cover select-none" alt="cover-game" />
     <p class="flex-grow text-xs font-semibold text-left">
       {{ title }}
     </p>

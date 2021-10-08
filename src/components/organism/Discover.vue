@@ -14,7 +14,7 @@
             />
           </TabPanel>
         </TabPanels>
-        <TabList class="w-48 grid grid-rows-6 gap-1">
+        <TabList class="w-full md:w-48 grid grid-cols-2 md:grid-cols-1 grid-rows-6 gap-1">
           <Tab v-for="{ image, title } of highlightGames" v-slot="{ selected }" :key="image" as="template">
             <HighlightGameList 
               v-bind="{image,title, selected}"

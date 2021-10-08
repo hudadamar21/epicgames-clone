@@ -20,6 +20,7 @@
         <MenuItem title="unreal engine"/>
       </ul>
       <div class="
+        absolute md:static bottom-0 right-0
         shadow-top md:shadow-none 
         flex flex-col md:flex-row 
         text-[8.75px]
@@ -71,7 +72,7 @@
       h-13 w-full 
       bg-epic-gray-100 text-white
       text-[0.7rem] font-medium 
-      z-20 select-none;
+      z-40 select-none;
   }
   .nav-logo {
     @apply 

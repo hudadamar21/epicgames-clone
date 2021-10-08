@@ -17,6 +17,7 @@ module.exports = {
         epic: {
           black: '#121212',
           gray: {
+            50: '#2F2F2F',
             100: '#2A2A2A',
             200: '#202020'
           },

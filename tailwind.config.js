@@ -22,6 +22,9 @@ module.exports = {
       padding: {
         '13': '3.25rem'
       },
+      margin: {
+        '13': '3.25rem'
+      },
       colors: {
         epic: {
           black: '#121212',

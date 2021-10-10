@@ -41,14 +41,7 @@
           ">
             <Globe class="w-8 md:w-6 h-8 md:h-6"/>
           </button>
-          <a href="#" class="
-            flex-centered 
-            h-full w-2/3 md:w-auto 
-            opacity-70 hover:opacity-100 
-            px-5 gap-5 md:gap-3 
-            tracking-widest font-semibold
-            border-r border-white/10 md:border-none
-          ">
+          <a href="#" class="signin-button">
             <User class="w-7 md:w-5 h-7 md:h-5"/>
             SIGN IN
           </a>
@@ -71,7 +64,7 @@
       fixed flex
       h-13 w-full 
       bg-epic-gray-100 text-white
-      text-[0.7rem] font-medium 
+      text-[0.7rem]
       z-40 select-none;
   }
   .nav-logo {
@@ -97,22 +90,25 @@
     @apply 
       flex flex-col md:flex-row 
       uppercase 
-      text-xs md:text-[10.5px] font-normal
+      text-xs md:text-[10.5px] font-semibold 
       divide-y md:divide-none divide-white/5;
+  }
+  .signin-button {
+    @apply 
+      flex-centered 
+      h-full w-2/3 md:w-auto 
+      opacity-70 hover:opacity-100 
+      px-5 gap-5 md:gap-3 
+      tracking-widest font-bold
+      border-r border-white/10 md:border-none;    
   }
   .get-epic-games-button {
     @apply 
       flex items-center justify-center 
       px-6 pt-1 md:pt-0
-      bg-epic-blue font-semibold
+      bg-epic-blue font-bold
       bg-opacity-90 hover:bg-opacity-100 
       h-full tracking-widest;
   }
-  .toggle-button {
-    @apply 
-      absolute top-0 right-0 
-      grid place-items-center 
-      text-white bg-epic-blue
-      md:hidden h-full text-2xl;
-  }
+  
 </style>

@@ -9,7 +9,7 @@
 
 <template>
   <div 
-    class="relative rounded-xl h-[28rem] bg-cover bg-center w-full"
+    class="relative rounded-xl h-full bg-cover bg-center w-full"
     :style="{backgroundImage: `url(${image})`}"  
   >
     <div class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-black/80 md:from-black/40 to-transparent"></div>
@@ -34,8 +34,8 @@
         </BaseButton>
       </div>
     </div>
-    <button class="absolute top-2 right-2 h-13 w-16 hover:bg-white/10 flex-centered rounded-md transition duration-150 group">
-      <div class="absolute z-30 bottom-[112%] text-white/90 text-sm font-medium tracking-wide px-5 py-2.5 rounded-md bg-epic-gray-200 shadow-lg opacity-0 group-hover:opacity-100 transition duration-150">
+    <button class="absolute top-2 right-2 h-13 w-16 hover:bg-white/10 flex md:hidden items-center justify-center rounded-md transition duration-150 group">
+      <div class="absolute z-30 top-[112%] right-0 text-white/90 text-sm font-medium tracking-wide px-3 py-2 rounded-md bg-epic-gray-200 shadow-lg whitespace-nowrap hidden group-hover:block transition duration-150">
         Add to Wishlist
       </div>
       <AddIcon class="w-6 h-6"/>

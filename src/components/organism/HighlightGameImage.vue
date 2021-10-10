@@ -9,7 +9,7 @@
 
 <template>
   <div 
-    class="relative rounded-xl h-full bg-cover bg-center w-full"
+    class="relative rounded-xl h-full bg-cover bg-center w-full "
     :style="{backgroundImage: `url(${image})`}"  
   >
     <div class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-black/80 md:from-black/40 to-transparent"></div>
@@ -18,7 +18,7 @@
       <p class="md:text-shadow">
         {{ description }}
       </p>
-      <div class="mt-6 md:text-shadow flex flex-col md:flex-row">
+      <div class="mt-6 md:text-shadow flex flex-col md:flex-row gap-2">
         <span class="font-normal">Starting at </span>
         <span>IDR {{ price }}</span>
       </div>

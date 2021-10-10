@@ -10,7 +10,7 @@
 </script>
 
 <template>
-  <a href="#" class="text-sm group focus:bg-epic-gray-50">
+  <a href="#" class="text-sm group focus:bg-epic-gray-50 cursor-pointer">
     <div class="relative h-48 w-full rounded-md overflow-hidden mb-2 bg-white/80">
       <img :src="image" class="w-full h-full object-cover hover:opacity-90 transition-opacity"  alt="">
       <div class="absolute top-3 right-3 hidden group-hover:block">

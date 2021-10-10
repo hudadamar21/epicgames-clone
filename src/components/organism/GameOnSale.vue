@@ -30,7 +30,7 @@ import GameCard from '../molecules/GameCard.vue';
   <div class="h-96">
     <Swiper
       v-bind="swiperOptions"
-      class="w-full h-full cursor-pointer pl-0 md:pl-3 pr-20 md:pr-3"
+      class="w-full h-full pl-0 md:pl-3 pr-20 md:pr-3"
     >
       <SwiperSlide
         v-for="{ image, title, studio, discount, price, discountPrice } of dummyGameList"

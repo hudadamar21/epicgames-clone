@@ -68,6 +68,6 @@ const gameList = [
   },
 ]
 
-export const highlightGames = gameList.slice(0, 5)
+export const highlightGames = gameList.slice(0, 6)
 
 export const dummyGameList = [...gameList, ...gameList, ...gameList]

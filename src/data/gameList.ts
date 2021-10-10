@@ -14,7 +14,7 @@ const gameList = [
     price: "200,500.00",
     studio: 'Ubisoft',
     discount: '-35%',
-    discountPrice: '161,850'
+    discountPrice: '161,850.00'
   },
   {
     title: 'Far Cry 6',
@@ -24,7 +24,7 @@ const gameList = [
     price: "619,190.00",
     studio: 'Ubisoft',
     discount: '-35%',
-    discountPrice: '161,850'
+    discountPrice: '161,850.00'
   },
   {
     title: 'Assassins Creeds Valhalla',
@@ -34,7 +34,7 @@ const gameList = [
     price: "309,190.00",
     studio: 'Ubisoft',
     discount: '-35%',
-    discountPrice: '161,850'
+    discountPrice: '161,850.00'
   },
   {
     title: 'Little Nightmare',
@@ -44,7 +44,7 @@ const gameList = [
     price: "119,190.00",
     studio: 'Ubisoft',
     discount: '-35%',
-    discountPrice: '161,850'
+    discountPrice: '161,850.00'
   },
   {
     title: 'Battlefield 2042',
@@ -54,7 +54,7 @@ const gameList = [
     price: "659,000.00",
     studio: 'Ubisoft',
     discount: '-35%',
-    discountPrice: '161,850'
+    discountPrice: '161,850.00'
   },
   {
     title: 'Kena bridge of spirits',
@@ -64,7 +64,7 @@ const gameList = [
     price: "659,000.00",
     studio: 'Ubisoft',
     discount: '-35%',
-    discountPrice: '161,850'
+    discountPrice: '161,850.00'
   },
 ]
 

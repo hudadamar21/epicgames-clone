@@ -14,12 +14,12 @@
   >
     <div class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-black/80 md:from-black/40 to-transparent"></div>
     <div class="absolute bottom-8 left-5 md:left-8 text-sm font-semibold md:font-bold w-[80%] md:w-[40%]">
-      <div class="md:text-shadow mb-2 uppercase text-xxs md:text-xs">{{ status }}</div>
-      <p class="md:text-shadow">
+      <div class="md:text-shadow mb-1.5 font-bold uppercase text-xxs md:text-xs">{{ status }}</div>
+      <p class="md:text-shadow font-bold">
         {{ description }}
       </p>
-      <div class="mt-6 md:text-shadow flex flex-col md:flex-row gap-2">
-        <span class="font-normal">Starting at </span>
+      <div class="mt-6 md:text-shadow flex flex-col md:flex-row gap-1">
+        <span class="font-semibold">Starting at </span>
         <span>IDR {{ price }}</span>
       </div>
       <div class="hidden md:flex items-center gap-2 mt-3 h-12">
@@ -28,7 +28,7 @@
         </BaseButton>
         <BaseButton class="hover:bg-white/10 px-5 flex items-center justify-center gap-2">
           <AddIcon class="w-6 h-6"/>
-          <span class="text-xxs text-shadow font-semibold w-30">
+          <span class="text-xxs text-shadow font-bold w-30">
             Add To Wishlist
           </span>
         </BaseButton>
@@ -42,10 +42,3 @@
     </button>
   </div>
 </template>
-
-<style>
-  .text-shadow {
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
-    @apply tracking-wide;
-  }
-</style>

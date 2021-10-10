@@ -19,5 +19,6 @@
     </div>
   </div>
   
+  <MobileSearch/>
   
 </template>

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue"
 import { highlightGames } from "@/data/gameList"
+import { HIGHLIGHT_GAME_AUTOPLAY_DELAY } from "@/constant"
 
 // Swiper
 import { Swiper, SwiperSlide } from 'swiper/vue';
@@ -11,6 +12,8 @@ import "swiper/css/pagination"
 SwiperCore.use([Autoplay, Thumbs, Pagination]);
 
 const thumbsSwiper = ref(null)
+const autoplayDelay = ref(HIGHLIGHT_GAME_AUTOPLAY_DELAY)
+const activeIndex = ref(0)
 
 function onSwiper (swiper: any){
   console.log(swiper)
@@ -21,20 +24,21 @@ function setThumbsSwiper(swiper: any) {
 }
 
 const handleSlideChange = (s: any) => {
-  console.log(s)
+  activeIndex.value = s.activeIndex
 }
 
 </script>
 
 <template>
-  <div class="flex flex-col md:flex-row h-[28rem] w-full">
+  <div class="flex flex-col md:flex-row h-[32rem] sm:h-[28rem] w-full">
     <Swiper
       v-bind="{
         spaceBetween: 10,
         navigation: true,
         thumbs: { swiper: thumbsSwiper },
         autoplay: {
-          delay: 7000,
+          delay: autoplayDelay,
+          disableOnInteraction: false
         },
         breakpoints: {
           768: { pagination: false }
@@ -66,10 +70,14 @@ const handleSlideChange = (s: any) => {
       class="hidden md:block discover-swiper h-full w-max pl-4 cursor-pointer"
     >
       <SwiperSlide 
-        v-for="{ image, title } of highlightGames" 
+        v-for="({ image, title }, index) of highlightGames" 
         :key="title"
       >
-        <HighlightGameList v-bind="{image, title}" />
+        <HighlightGameList 
+          :activeIndex="activeIndex" 
+          :isActive="index === activeIndex" 
+          v-bind="{image, title}" 
+        />
       </SwiperSlide>
     </Swiper>
   </div>
@@ -78,7 +86,7 @@ const handleSlideChange = (s: any) => {
 
 <style>
 .discover-swiper .swiper-slide-thumb-active .hightlight-game-list {
-  @apply bg-epic-gray-100;
+  @apply bg-epic-gray-200 rounded-2xl;
 }
 .swiper-pagination {
   @apply flex md:hidden items-center justify-center gap-1;

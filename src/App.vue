@@ -1,38 +1,34 @@
 <script setup lang="ts">
-  import { TabGroup, TabList, Tab, TabPanels, TabPanel } from '@headlessui/vue'
+  import { TabGroup, TabList, TabPanels, TabPanel } from '@headlessui/vue'
+
 </script>
 
 <template>
   <MainLayout>
-    <main class="py-13 md:ml-6 container">
+    <main class="py-13 md:ml-6">
       <TabGroup>
-        <TabList class="sticky top-13 h-20 lg:h-24 flex items-center justify-between bg-epic-black/90 backdrop-blur z-10">
-          <div class="text-white text-sm flex items-center gap-5">
-            <Tab v-slot="{ selected }" as="template">
-              <button :class="!selected && 'opacity-40'">
-                Discover  
-              </button>
-            </Tab>
-            <Tab v-slot="{ selected }" as="template">
-              <button :class="!selected && 'opacity-40'">
-                Browser
-              </button>
-            </Tab>
-          </div>
-          <SearchInput/>
-        </TabList>
-        <TabPanels class="text-white">
-          <TabPanel>
-            <Discover/>
-          </TabPanel>
-          <TabPanel>
-            Browse
-          </TabPanel>
-        </TabPanels>
+        <div class="md:container sticky top-13 h-20 lg:h-24 z-30">
+          <TabList class="h-full flex items-center justify-between bg-epic-black/90 backdrop-blur  px-5 md:px-0 border-b border-white/10 md:border-transparent">
+            <TabMenu/>
+            <SearchInput/>
+            <MobileSearch/>
+            <MobileTabMenu/>
+          </TabList>
+        </div>
+        <div class="container">
+          <TabPanels class="text-white mt-5 md:mt-0">
+            <TabPanel>
+              <Discover/>
+            </TabPanel>
+            <TabPanel>
+              Browse
+            </TabPanel>
+          </TabPanels>
+        </div>
       </TabGroup>
     </main>
 
     <!-- Mobile Search -->
-    <MobileSearch/>
+    <Overlay />
   </MainLayout>
 </template>

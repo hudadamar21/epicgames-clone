@@ -8,7 +8,7 @@ export default {
             {find: "@", replacement: path.resolve(__dirname, 'src')}
         ],
     },
-    plugins: [   
+    plugins: [ 
         vue(), 
         Components({ 
             dts: 'src/components.d.ts',

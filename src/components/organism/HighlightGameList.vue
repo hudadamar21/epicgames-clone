@@ -1,21 +1,72 @@
 <script setup lang="ts">
-  defineProps<{
+  import { ref, onMounted, computed, watch } from "vue"
+  import { HIGHLIGHT_GAME_AUTOPLAY_DELAY } from "@/constant"
+  const props = defineProps<{
     image: string,
-    title: string
+    title: string,
+    isActive: boolean,
+    activeIndex: number
   }>()
+
+  watch(() => props.activeIndex, () => timerDelayed())
+
+  onMounted(() => timerDelayed())
+
+  const timer = ref<number>(0)
+
+  const timerPercent = computed(() => timer.value / 70 + '%')
+  
+  const timerDelayed = () => {
+    timer.value = 0
+    if(props.isActive){
+      const delay = setInterval(() => {
+        if(timer.value < HIGHLIGHT_GAME_AUTOPLAY_DELAY) {
+          timer.value += 100
+        } else {
+          clearInterval(delay)
+        }
+      }, 100)
+    }
+  }
 </script>
 
 <template>
   <li class="hightlight-game-list">
-    <img :src="image" class="w-12 bg-epic-blue rounded-lg h-14 md:h-full object-cover select-none" alt="cover-game" />
-    <p class="flex-grow text-xs font-semibold text-left">
-      {{ title }}
-    </p>
+    <div 
+      class="absolute top-0 left-0  h-full bg-epic-gray-50"
+      :style="{
+        width: isActive ? timerPercent : 0
+      }"
+    ></div>
+    <div class="relative flex items-center gap-2.5 h-full">
+      <img 
+        :src="image" 
+        :class="isActive && 'animate-zoom'"
+        class="w-12 bg-epic-blue rounded-lg h-14 md:h-full object-cover select-none"
+        alt="cover-game" 
+      />
+      <p class="flex-grow text-xs font-semibold text-left">
+        {{ title }}
+      </p>
+    </div>
+    
   </li>
 </template>
 
 <style>
   .hightlight-game-list {
-    @apply flex items-center gap-2.5 h-full px-2.5 py-2 rounded-2xl hover:bg-epic-gray-100 transition duration-200 cursor-pointer md:w-48;
+    @apply relative h-full px-2.5 py-2 overflow-hidden rounded-2xl hover:bg-epic-gray-200 transition duration-200 cursor-pointer md:w-48;
+  }
+
+  .animate-zoom {
+    animation: zoomin 0.3s forwards ease-in-out;
+  }
+  @keyframes zoomin {
+    0%, 100% {
+      transform: scale(100%)
+    }
+    50% {
+      transform: scale(108%);
+    }
   }
 </style>

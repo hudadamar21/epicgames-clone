@@ -1,5 +1,5 @@
 module.exports = {
-  purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+  purge: ['./index.html', './src/**/*.{vue,js,ts}'],
   darkMode: 'class', // or 'media' or 'class'
   mode: 'jit',
   theme: {
@@ -13,16 +13,7 @@ module.exports = {
       },
     },
     extend: {
-      inset: {
-        '13': '3.25rem'
-      },
-      height: {
-        '13': '3.25rem'
-      },
-      padding: {
-        '13': '3.25rem'
-      },
-      margin: {
+      spacing: {
         '13': '3.25rem'
       },
       colors: {

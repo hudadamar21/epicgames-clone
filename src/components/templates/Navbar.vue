@@ -41,7 +41,7 @@
           ">
             <Globe class="w-8 md:w-6 h-8 md:h-6"/>
           </button>
-          <a href="#" class="signin-button">
+          <a href="#" class="flex-centered signin-button">
             <User class="w-7 md:w-5 h-7 md:h-5"/>
             SIGN IN
           </a>
@@ -95,7 +95,6 @@
   }
   .signin-button {
     @apply 
-      flex-centered 
       h-full w-2/3 md:w-auto 
       opacity-70 hover:opacity-100 
       px-5 gap-5 md:gap-3 

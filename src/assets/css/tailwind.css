@@ -22,6 +22,12 @@
   .ar-1 {
     aspect-ratio: 1/1;
   }
+  .ar-16\/9 {
+    aspect-ratio: 16/9;
+  }
+  .ar-3\/4 {
+    aspect-ratio: 3/4;
+  }
   .text-shadow {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
     letter-spacing: 0.025rem;

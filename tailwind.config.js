@@ -9,7 +9,7 @@ module.exports = {
         DEFAULT: '1rem',
         sm: '2rem',
         lg: '6rem',
-        xl: '9rem',
+        xl: '8.5rem',
       },
     },
     extend: {
@@ -29,6 +29,7 @@ module.exports = {
       },
       fontSize : {
         'xxs': '.65rem',
+        'base': '0.95rem'
       }
     },
   },

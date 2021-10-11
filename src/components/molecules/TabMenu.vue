@@ -57,7 +57,7 @@
     </Tab>
     <Tab v-slot="{ selected }" as="template">
       <button @click="resetState" class="font-semibold" :class="!selected && 'md:opacity-40'">
-        Browser 
+        Browse
       </button>
     </Tab>
   </div>

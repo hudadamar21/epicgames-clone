@@ -71,3 +71,26 @@ const gameList = [
 export const highlightGames = gameList.slice(0, 6)
 
 export const dummyGameList = [...gameList, ...gameList, ...gameList]
+
+export const freeGames = [
+  {
+    title: 'Dishonored',
+    image: dishonored,
+    freeNow: true,
+    rangeDate: 'Now - Oct 14 at 10:00 PM'
+  },
+  {
+    title: 'Far Cry 6',
+    image: farcry6,
+    freeNow: false,
+    rangeDate: 'Oct 14 - Oct 21'
+  },
+  {
+    title: 'Assassins Creeds Valhalla',
+    image: acValhalla,
+    freeNow: false,
+    rangeDate: 'Oct 14 - Oct 21'
+  },
+]
+
+export default gameList

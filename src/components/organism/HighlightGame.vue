@@ -30,7 +30,7 @@ const handleSlideChange = (s: any) => {
 </script>
 
 <template>
-  <div class="flex flex-col md:flex-row h-[32rem] sm:h-[28rem] w-full">
+  <div class="flex flex-col md:flex-row h-[32rem] sm:h-[30rem] w-full">
     <Swiper
       v-bind="{
         spaceBetween: 10,

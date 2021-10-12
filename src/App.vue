@@ -1,12 +1,15 @@
 <script setup lang="ts">
   import { TabGroup, TabList, TabPanels, TabPanel } from '@headlessui/vue'
 
+  const changeTab = () => {
+    window.scrollTo(0,0)
+  }
 </script>
 
 <template>
   <MainLayout>
     <main class="py-13 md:ml-6">
-      <TabGroup>
+      <TabGroup @change="changeTab">
         <div class="md:container sticky top-13 h-20 lg:h-24 z-30">
           <TabList class="h-full flex items-center justify-between bg-epic-black/90 backdrop-blur  px-5 md:px-0 border-b border-white/10 md:border-transparent">
             <TabMenu/>
@@ -21,7 +24,7 @@
               <Discover/>
             </TabPanel>
             <TabPanel>
-              Browse
+              <Browse/>
             </TabPanel>
           </TabPanels>
         </div>

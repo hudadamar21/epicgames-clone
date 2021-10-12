@@ -29,8 +29,9 @@
     <h2 class="font-bold mb-4 text-white/90">{{ title }}</h2>
     <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
       <GameCard
-        v-for="{ title, image, studio, price } of list" :key="title"
+        v-for="{ title, image, studio, price } of list" 
         v-bind="{ title, image, studio, price }"
+        :key="title"
       />
     </div>
   </div>

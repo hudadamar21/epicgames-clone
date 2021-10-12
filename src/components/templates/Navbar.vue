@@ -5,9 +5,7 @@
 
 <template>
   <nav class="nav-container">
-    <div class="nav-logo">
-      <EpicGames class="w-9 h-9"/>
-    </div>
+    <Logo/>
     <div 
       class="nav-menu md:translate-x-0" 
       :class="!isMenuOpen && 'translate-x-full'"
@@ -19,15 +17,7 @@
         <MenuItem title="help"/>
         <MenuItem title="unreal engine"/>
       </ul>
-      <div class="
-        absolute md:static bottom-0 right-0
-        shadow-top md:shadow-none 
-        flex flex-col md:flex-row 
-        text-[8.75px]
-        w-full md:w-auto 
-        border-t md:border-none border-white/10 
-        h-[6.5rem] md:h-auto
-      ">
+      <div class="nav-second-menu">
         <div class="
           flex flex-row-reverse md:flex-row 
           w-full md:w-auto h-full 
@@ -67,14 +57,7 @@
       text-[0.7rem]
       z-40 select-none;
   }
-  .nav-logo {
-    @apply 
-      relative 
-      flex items-center 
-      opacity-80 hover:opacity-100 
-      transition duration-200 
-      z-10 h-full pl-4 cursor-pointer;
-  }
+  
   .nav-menu {
     @apply 
       fixed md:static top-0 right-0 
@@ -86,6 +69,7 @@
       bg-epic-gray-100
       transition-transform duration-300;
   }
+
   .nav-menu-list {
     @apply 
       flex flex-col md:flex-row 
@@ -93,6 +77,18 @@
       text-xs md:text-[10.5px] font-semibold 
       divide-y md:divide-none divide-white/5;
   }
+
+  .nav-second-menu {
+    @apply
+      absolute md:static bottom-0 right-0
+      shadow-top md:shadow-none 
+      flex flex-col md:flex-row 
+      text-[8.75px]
+      w-full md:w-auto 
+      border-t md:border-none border-white/10 
+      h-[6.5rem] md:h-auto
+  }
+  
   .signin-button {
     @apply 
       h-full w-2/3 md:w-auto 
@@ -101,6 +97,7 @@
       tracking-widest font-bold
       border-r border-white/10 md:border-none;    
   }
+  
   .get-epic-games-button {
     @apply 
       flex items-center justify-center 

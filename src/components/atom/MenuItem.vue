@@ -1,10 +1,12 @@
 <script setup lang="ts">
+  interface Props {
+    title: string,
+    href?: string,
+    active?: boolean
+  }
+
   withDefaults(
-    defineProps<{
-      title: string,
-      href?: string,
-      active?: boolean
-    }>(),
+    defineProps<Props>(),
     {
       href: '#',
     }

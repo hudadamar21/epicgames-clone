@@ -11,7 +11,7 @@ import GameCard from '../molecules/GameCard.vue';
 </script>
 
 <template>
-  <div class="flex justify-between mt-12 mb-5">
+  <div class="px-5 md:px-0 flex justify-between mt-12 mb-5">
     <div class="font-semibold flex items-center gap-1">
       <h2>Game On Sale</h2>
       <button class="hover:translate-x-1 transition-transform">
@@ -27,7 +27,7 @@ import GameCard from '../molecules/GameCard.vue';
       </button>
     </div>
   </div>
-  <div>
+  <div class="px-5 md:px-0">
     <Swiper
       v-bind="swiperOptions"
       class="w-full h-full pl-0 md:pl-3 pr-36 md:pr-3"

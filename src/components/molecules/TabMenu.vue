@@ -4,11 +4,14 @@
   import { toRefs } from "vue"
 
   const { showMobileTabMenu, showOverlay } = toRefs(state)
+  
 
   const openMobileTabMenu = () => {
     state.showMobileTabMenu = !state.showMobileTabMenu
     state.showOverlay = !state.showOverlay
   }
+
+  const { tabMenuIndex } = toRefs(state)
 </script>
 
 <template>
@@ -28,7 +31,7 @@
   >
     <div class="text-[8.5px] font-bold uppercase opacity-60 tracking-wide">Epic Games Store</div>
     <div class="flex items-center text-[13px] tracking-wide font-bold -mt-1">
-      Discover
+      {{ tabMenuIndex === 0 ? 'Discover' : 'Browse'}}
       <div 
         class="transition-transform duration-200" 
         :class="showMobileTabMenu && '-rotate-180'"

@@ -15,10 +15,6 @@ const thumbsSwiper = ref(null)
 const autoplayDelay = ref(HIGHLIGHT_GAME_AUTOPLAY_DELAY)
 const activeIndex = ref(0)
 
-function onSwiper (swiper: any){
-  console.log(swiper)
-}
-
 function setThumbsSwiper(swiper: any) {
   thumbsSwiper.value = swiper;
 }
@@ -45,9 +41,8 @@ const handleSlideChange = (s: any) => {
         },
         pagination: { clickable: true },
       }"
-      @swiper="onSwiper"
       @slideChange="handleSlideChange"
-      class="w-full md:w-[80%] h-full pb-8 md:pb-0 cursor-pointer"
+      class="w-full md:w-[80%] h-full pl-5 md:pl-0 pr-5 md:pr-0 pb-8 md:pb-0 cursor-pointer"
     >
       <SwiperSlide 
         v-for="{ image, title, status, description, price } of highlightGames" 

@@ -5,7 +5,18 @@ import littleNightmare from "@/assets/images/games/little-nightmare.jpg"
 import battlefield from "@/assets/images/games/battlefield.jpg"
 import kena from "@/assets/images/games/kena.jpg"
 
-const gameList = [
+export interface IGame {
+  title: string,
+  image: string,
+  status: string,
+  description: string,
+  price: string,
+  studio: string,
+  discount: string,
+  discountPrice: string
+}
+
+const gameList: IGame[] = [
   {
     title: 'Dishonored',
     image: dishonored,

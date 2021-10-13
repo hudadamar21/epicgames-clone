@@ -1,12 +1,10 @@
 <script setup lang="ts">
   import { toRefs } from "vue"
-  import { state } from "@/store"
+  import { state, resetState } from "@/store"
 
   const { showMobileSearch } = toRefs(state)
 
-  const hiddenMobileSearch = () => {
-    state.showMobileSearch = false
-  }
+  const hiddenMobileSearch = () => resetState()
 </script>
 
 <template>

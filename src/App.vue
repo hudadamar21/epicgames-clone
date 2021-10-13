@@ -1,8 +1,10 @@
 <script setup lang="ts">
   import { TabGroup, TabList, TabPanels, TabPanel } from '@headlessui/vue'
+  import { state } from "@/store";
 
-  const changeTab = () => {
+  const changeTab = (tabIndex: any) => {
     window.scrollTo(0,0)
+    state.tabMenuIndex = tabIndex
   }
 </script>
 
@@ -18,7 +20,7 @@
             <MobileTabMenu/>
           </TabList>
         </div>
-        <div class="container">
+        <div class="md:container">
           <TabPanels class="text-white mt-5 md:mt-0">
             <TabPanel>
               <Discover/>

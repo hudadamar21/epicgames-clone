@@ -22,7 +22,7 @@
 
 <template>
   <div class="relative">
-    <button @click="toggleDropdown" class="group relative flex items-center gap-2 text-sm font-semibold">
+    <button @click="toggleDropdown" class="group relative flex items-center gap-2 text-[13px] md:text-sm font-normal md:font-semibold">
       <span class="text-white/60">{{ name }}:</span> 
       <span class="flex items-center">
         {{ selectedName }}

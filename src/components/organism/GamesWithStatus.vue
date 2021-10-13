@@ -32,7 +32,7 @@
               <div class="text-sm">{{ game.title }}</div>
               <div class="text-xs">{{ game.price }}</div>
             </div>
-            <button class="absolute top-1/2 -translate-y-1/2 right-5 opacity-0 group-hover:opacity-100 transition">
+            <button class="absolute top-1/2 -translate-y-1/2 right-5 md:opacity-0 group-hover:opacity-100 transition">
               <AddIcon class="w-6 h-6"/>
             </button>
           </li>

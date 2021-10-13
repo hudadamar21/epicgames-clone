@@ -36,3 +36,15 @@ export const ResetFilter = () => {
     filter.lists.forEach(list => list.checked = false)
   })
 }
+
+export const mobileFilterOption =  ref(false)
+
+export const openFilterOption = () => {
+  mobileFilterOption.value = true
+  document.body.style.overflow = "hidden";
+}
+
+export const closeFilterOption = () => {
+  mobileFilterOption.value = false
+  document.body.style.overflow = "auto";
+}

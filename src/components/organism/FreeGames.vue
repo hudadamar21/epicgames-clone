@@ -5,8 +5,8 @@
 </script>
 
 <template>
-  <div class="bg-epic-gray-50 py-6 px-10 rounded mt-12">
-    <div class="flex items-center justify-between mb-6">
+  <div class="bg-epic-gray-50 py-5 md:py-6 md:px-10 rounded mt-12">
+    <div class="px-5 flex items-center justify-between mb-6">
       <div class="flex items-center gap-3">
         <IconGift class="w-8 h-8"/>
         <h2 class="text-lg font-semibold">Free Games</h2>
@@ -26,7 +26,7 @@
           }
         },
       }"
-      class="w-full h-full pr-20 md:pr-0 pb-10 md:pb-0"
+      class="w-full h-full pl-5 md:pl-0 pr-20 md:pr-0 pb-10 md:pb-0"
     >
       <SwiperSlide
         v-for="game of freeGames"

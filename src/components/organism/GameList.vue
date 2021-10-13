@@ -25,7 +25,7 @@
 </script>
 
 <template>
-  <div class="mt-20 lg:mt-14">
+  <div class="mt-20 lg:mt-14 px-5 md:px-0">
     <h2 class="font-bold mb-4 text-white/90">{{ title }}</h2>
     <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
       <GameCard

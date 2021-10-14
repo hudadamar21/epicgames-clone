@@ -17,7 +17,7 @@
         <MenuItem title="help"/>
         <MenuItem title="unreal engine"/>
       </ul>
-      <div class="nav-second-menu">
+      <div class="nav-second-menu shadow-top md:shadow-none">
         <div class="
           flex flex-row-reverse md:flex-row 
           w-full md:w-auto h-full 
@@ -31,10 +31,10 @@
           ">
             <Globe class="w-8 md:w-6 h-8 md:h-6"/>
           </button>
-          <a href="#" class="flex-centered signin-button">
+          <router-link to="/signin" class="flex-centered signin-button">
             <User class="w-7 md:w-5 h-7 md:h-5"/>
             SIGN IN
-          </a>
+          </router-link>
         </div>
         <a href="#" class="get-epic-games-button">
           GET EPIC GAMES
@@ -81,7 +81,7 @@
   .nav-second-menu {
     @apply
       absolute md:static bottom-0 right-0
-      shadow-top md:shadow-none 
+      
       flex flex-col md:flex-row 
       text-[8.75px]
       w-full md:w-auto 

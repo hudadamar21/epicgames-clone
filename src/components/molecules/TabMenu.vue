@@ -5,7 +5,6 @@
 
   const { showMobileTabMenu, showOverlay } = toRefs(state)
   
-
   const openMobileTabMenu = () => {
     state.showMobileTabMenu = !state.showMobileTabMenu
     state.showOverlay = !state.showOverlay
@@ -54,12 +53,20 @@
     "
   >
     <Tab v-slot="{ selected }" as="template">
-      <button @click="resetState" class="font-semibold" :class="!selected && 'md:opacity-40'">
+      <button 
+        @click="resetState" 
+        class="font-semibold hover:text-white" 
+        :class="!selected && 'text-white/40'"
+      >
         Discover  
       </button>
     </Tab>
     <Tab v-slot="{ selected }" as="template">
-      <button @click="resetState" class="font-semibold" :class="!selected && 'md:opacity-40'">
+      <button 
+        @click="resetState" 
+        class="font-semibold hover:text-white" 
+        :class="!selected && 'text-white/40'"
+      >
         Browse
       </button>
     </Tab>

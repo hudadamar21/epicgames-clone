@@ -5,7 +5,7 @@
 </script>
 
 <template>
-  <div class="bg-epic-gray-50 py-5 md:py-6 md:px-10 rounded mt-12">
+  <div class="bg-epic-gray-50 py-5 md:py-6 md:px-10 md:rounded mt-12">
     <div class="px-5 flex items-center justify-between mb-6">
       <div class="flex items-center gap-3">
         <IconGift class="w-8 h-8"/>

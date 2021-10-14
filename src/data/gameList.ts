@@ -12,8 +12,8 @@ export interface IGame {
   description: string,
   price: string,
   studio: string,
-  discount: string,
-  discountPrice: string
+  discount?: string,
+  discountPrice?: string
 }
 
 const gameList: IGame[] = [
@@ -34,8 +34,6 @@ const gameList: IGame[] = [
     description: 'Less than 3 weeks until launch! Pre-purchase to get a deadly Discos Locos weapon and an outfit for Chorizo, your canine companion.',
     price: "619,190.00",
     studio: 'Ubisoft',
-    discount: '-35%',
-    discountPrice: '161,850.00'
   },
   {
     title: 'Assassins Creeds Valhalla',
@@ -54,8 +52,6 @@ const gameList: IGame[] = [
     description: 'Immerse yourself in Little Nightmares, a dark whimsical tale that will confront you with your childhood fears! Help Six escape The Maw',
     price: "119,190.00",
     studio: 'Ubisoft',
-    discount: '-35%',
-    discountPrice: '161,850.00'
   },
   {
     title: 'Battlefield 2042',
@@ -64,8 +60,6 @@ const gameList: IGame[] = [
     description: "Don't miss a moment of the Battlefield 2042 Open Beta, start your pre-load now!",
     price: "659,000.00",
     studio: 'Ubisoft',
-    discount: '-35%',
-    discountPrice: '161,850.00'
   },
   {
     title: 'Kena bridge of spirits',

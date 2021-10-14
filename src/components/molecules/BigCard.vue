@@ -18,12 +18,16 @@
         <a href="#" class="block mb-3 text-base font-semibold">
           {{ title}}
         </a>
-        <p class="text-sm font-semibold opacity-60">
+        <p class="text-sm font-medium opacity-50">
           {{ description }}
         </p>
       </div>
-      <div v-if="isGame && price" class="font-semibold text-base">IDR {{ price }}</div>
-      <a v-else href="#" class="font-semibold text-base hover:border-b ">Learn More</a>
+      <div v-if="isGame && price" class="font-semibold text-base">
+        IDR {{ price }}
+      </div>
+      <a v-else href="#" class="font-semibold text-base hover:border-b border-b border-white/10 hover:border-white">
+        Learn More
+      </a>
     </div>
   </div>
 </template>

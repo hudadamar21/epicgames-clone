@@ -32,10 +32,10 @@ const sortByList = [
 
 <template>
   <div class="grid grid-cols-12 mt-6 mb-16">
-    <div class="col-span-12 lg:col-span-9 px-5">
+    <div class="col-span-12 lg:col-span-9 pr-7">
       <div class="flex items-center justify-between">
         <Dropdown name="Sort By" :lists="sortByList" />
-        <button @click="openFilterOption" class="flex items-center gap-2 text-[13px]">
+        <button @click="openFilterOption" class="md:hidden flex items-center gap-2 text-[13px]">
           Filter
           <FilterIcon />
         </button>
@@ -49,7 +49,7 @@ const sortByList = [
       </div>
       <BrowsePagination/>
     </div>
-    <BrowseFilterGameList class="hidden lg:block col-span-3 ml-5" />
+    <BrowseFilterGameList class="hidden lg:block col-span-3 " />
   </div>
   <MobileFilterOption v-show="mobileFilterOption"/>
 </template>

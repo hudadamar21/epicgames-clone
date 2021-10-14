@@ -29,7 +29,7 @@ module.exports = {
       },
       fontSize : {
         'xxs': '.65rem',
-        'base': '0.95rem'
+        'base': '0.813rem'
       }
     },
   },

@@ -1,9 +1,9 @@
-import dishonored from "@/assets/images/games/dishonored.jpg";
-import farcry6 from "@/assets/images/games/farcry6.jpg";
-import acValhalla from "@/assets/images/games/ac-valhalla.jpg";
-import littleNightmare from "@/assets/images/games/little-nightmare.jpg";
-import battlefield from "@/assets/images/games/battlefield.jpg";
-import kena from "@/assets/images/games/kena.jpg";
+import dishonored from "@/assets/images/games/dishonored.webp";
+import farcry6 from "@/assets/images/games/farcry6.webp";
+import acValhalla from "@/assets/images/games/ac-valhalla.webp";
+import littleNightmare from "@/assets/images/games/little-nightmare.webp";
+import battlefield from "@/assets/images/games/battlefield.webp";
+import kena from "@/assets/images/games/kena.webp";
 
 export interface IGame {
   title: string;

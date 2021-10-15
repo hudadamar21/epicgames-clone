@@ -17,7 +17,7 @@ import { dummyGameList } from "@/data/gameList";
       href="#"
       class="w-full lg:w-[60%] ar-16/9 bg-gradient-to-br from-black to-epic-blue rounded-2xl flex items-center justify-center px-3 hover:opacity-90 transition duration-200 cursor-pointer"
     >
-      <img src="@/assets/images/games/game-collection.png" class="w-full" alt="game collection" />
+      <img src="@/assets/images/games/game-collection.webp" class="w-full" alt="game collection" />
     </a>
     <div class="text-sm ">
       <h2 class="mb-2.5 lg:mb-4 text-lg md:text-base">Browse</h2>

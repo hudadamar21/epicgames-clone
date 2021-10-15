@@ -31,6 +31,7 @@ const changeCountGameList = (e: any) => {
         v-for="list of list"
         v-bind="list"
         :key="title"
+        class="mb-6 md:mb-0"
       />
     </div>
   </div>

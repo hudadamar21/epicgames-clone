@@ -1,10 +1,14 @@
 <script setup lang="ts">
 import { state, resetState } from "@/store";
-import { toRefs } from "vue";
+import { watch, toRefs } from "vue";
 
 defineEmits(["close"]);
 
 const { showOverlay } = toRefs(state);
+
+watch(showOverlay, (newval) => {
+  document.body.style.overflow = newval ? 'hidden' : 'auto'
+})
 
 const closeOverlay = () => {
   resetState();

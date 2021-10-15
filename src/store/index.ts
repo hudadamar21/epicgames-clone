@@ -5,9 +5,11 @@ interface State {
   showMobileTabMenu: boolean;
   showOverlay: boolean;
   tabMenuIndex: number;
+  isMenuOpen: boolean
 }
 
 export const state = reactive<State>({
+  isMenuOpen: false,
   showMobileSearch: false,
   showMobileTabMenu: false,
   showOverlay: false,
@@ -15,7 +17,9 @@ export const state = reactive<State>({
 });
 
 export const resetState = () => {
+  state.isMenuOpen = false
   state.showMobileSearch = false;
   state.showMobileTabMenu = false;
   state.showOverlay = false;
 };
+

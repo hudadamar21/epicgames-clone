@@ -1,6 +1,18 @@
 <script setup lang="ts">
-import { ref } from "vue";
-const isMenuOpen = ref(false);
+import { toRefs } from "vue";
+import { resetState, state } from "@/store"
+
+function openMenu () {
+  state.isMenuOpen = !state.isMenuOpen
+  if(state.isMenuOpen) {
+    state.showOverlay = true
+  } else {
+    resetState()
+  }
+}
+
+const { isMenuOpen } = toRefs(state)
+
 </script>
 
 <template>
@@ -28,7 +40,7 @@ const isMenuOpen = ref(false);
         <a href="#" class="get-epic-games-button">GET EPIC GAMES</a>
       </div>
     </div>
-    <ToggleMenu @toggle="isMenuOpen = !isMenuOpen" :isMenuOpen="isMenuOpen" />
+    <ToggleMenu @toggle="openMenu" :isMenuOpen="isMenuOpen" />
   </nav>
 </template>
 
@@ -60,10 +72,11 @@ const isMenuOpen = ref(false);
 }
 
 .nav-second-menu {
-  @apply absolute md:static bottom-0 right-0
+  @apply
+      fixed bottom-0 right-0  md:static 
       flex flex-col md:flex-row 
       text-[8.75px]
-      w-full md:w-auto 
+      w-[90%] md:w-auto 
       border-t md:border-none border-white/10 
       h-[6.5rem] md:h-auto;
 }

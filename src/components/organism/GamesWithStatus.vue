@@ -11,6 +11,9 @@ import gameList from "@/data/gameList";
       slidesPerView: 1,
       breakpoints: {
         768: {
+          slidesPerView: 2,
+        },
+        1280: {
           slidesPerView: 3,
         },
       },

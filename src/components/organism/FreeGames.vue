@@ -24,6 +24,7 @@ import { freeGames } from "@/data/gameList";
           },
         },
       }"
+      class="px-5 md:px-0"
     >
       <SwiperSlide v-for="game of freeGames" :key="game.title">
         <a href="#" class="w-full h-full cursor-pointer">
@@ -36,7 +37,7 @@ import { freeGames } from "@/data/gameList";
               :class="game.freeNow ? 'bg-epic-blue' : 'bg-black'"
             >{{ game.freeNow ? "Free Now" : "Coming Soon" }}</div>
           </div>
-          <div class="mt-4 text-sm  tracking-tight">
+          <div class="mt-4 text-sm tracking-tight">
             <div>{{ game.title }}</div>
             <div class="opacity-60">Free {{ game.rangeDate }}</div>
           </div>

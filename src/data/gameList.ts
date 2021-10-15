@@ -81,7 +81,7 @@ const gameList: IGame[] = [
 
 export const highlightGames = gameList.slice(0, 6);
 
-export const dummyGameList = [...gameList, ...gameList, ...gameList];
+export const dummyGameList = [...gameList, ...gameList, ...gameList, ...gameList];
 
 export const freeGames = [
   {

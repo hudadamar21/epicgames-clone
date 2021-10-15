@@ -5,8 +5,37 @@ import "swiper/css";
 SwiperCore.use([Navigation]);
 
 import { dummyGameList } from "@/data/gameList";
-import swiperOptions from "@/data/gameOnSaleSwiperOptions";
 import GameCard from "../molecules/GameCard.vue";
+
+const swiperOptions = {
+  navigation: {
+    prevEl: ".gameonsale-prev",
+    nextEl: ".gameonsale-next",
+  },
+  spaceBetween: 20,
+  breakpoints: {
+    0: {
+      slidesPerGroup: 1,
+      slidesPerView: 1,
+    },
+    480: {
+      slidesPerGroup: 1,
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerGroup: 2,
+      slidesPerView: 3,
+    },
+    1024: {
+      slidesPerGroup: 3,
+      slidesPerView: 4,
+    },
+    1280: {
+      slidesPerGroup: 5,
+      slidesPerView: 6,
+    },
+  },
+}
 </script>
 
 <template>

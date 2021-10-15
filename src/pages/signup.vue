@@ -1,73 +1,22 @@
 <script setup lang="ts">
-import { reactive, ref, watch, computed } from "vue";
+import { ref, computed } from "vue";
 import countries from "@/data/countries";
+import useRefValidation from "@/hooks/useRefValidation";
 
-interface Inputs {
-  [index: string]: string;
-  country: string;
-  firstName: string;
-  lastName: string;
-  displayName: string;
-  email: string;
-  password: string;
-}
+const [ country, setCountry, countryError ] = useRefValidation()
+const [ firstName, setFirstName, firstNameError ] = useRefValidation()
+const [ lastName, setLastName, lastNameError ] = useRefValidation()
+const [ displayName, setDisplayName, displayNameError ] = useRefValidation()
+const [ email, setEmail, emailError ] = useRefValidation()
+const [ password, setPassword, passwordError ] = useRefValidation()
 
-const inputs: Inputs = reactive({
-  country: "",
-  firstName: "",
-  lastName: "",
-  displayName: "",
-  email: "",
-  password: "",
-});
-
-const errors: Inputs = reactive({
-  country: "",
-  firstName: "",
-  lastName: "",
-  displayName: "",
-  email: "",
-  password: "",
-});
 
 const recieveNews = ref(false);
 const agreeTerms = ref(false);
 
-watch(
-  () => inputs.firstName,
-  () => (errors.firstName = !inputs.firstName ? "required" : "")
+const validInput = computed(() => 
+  !!(firstName && lastName && displayName && email && password)
 );
-watch(
-  () => inputs.lastName,
-  () => (errors.lastName = !inputs.lastName ? "required" : "")
-);
-watch(
-  () => inputs.displayName,
-  () => (errors.displayName = !inputs.displayName ? "required" : "")
-);
-watch(
-  () => inputs.email,
-  () => (errors.email = !inputs.email ? "required" : "")
-);
-watch(
-  () => inputs.password,
-  () => (errors.password = !inputs.password ? "required" : "")
-);
-
-const validInput = computed(
-  () =>
-    !!(
-      inputs.firstName &&
-      inputs.lastName &&
-      inputs.displayName &&
-      inputs.email &&
-      inputs.password
-    )
-);
-
-function handleInput({ name, value }: { name: string; value: string }) {
-  inputs[name] = value;
-}
 </script>
 
 <template>
@@ -76,7 +25,7 @@ function handleInput({ name, value }: { name: string; value: string }) {
       <div class="space-y-6">
         <DropdownInput 
           class="z-20" 
-          name="Country *" 
+          name="Country" 
           :lists="countries" 
           defaultSelected="indonesia"
           isRequired
@@ -85,34 +34,34 @@ function handleInput({ name, value }: { name: string; value: string }) {
           <FloatingInput
             name="firstName"
             title="First Name"
-            :input="inputs.firstName"
-            :error="errors.firstName"
-            @value="handleInput"
+            :input="firstName"
+            :error="firstNameError"
+            @value="(val:string) => setFirstName(val)"
             isRequired
           />
           <FloatingInput
             name="lastName"
-            title="Last Name *"
-            :input="inputs.lastName"
-            :error="errors.lastName"
-            @value="handleInput"
+            title="Last Name"
+            :input="lastName"
+            :error="lastNameError"
+            @value="(val:string) => setLastName(val)"
             isRequired
           />
         </div>
         <FloatingInput
           name="displayName"
           title="Display Name"
-          :input="inputs.displayName"
-          :error="errors.displayName"
-          @value="handleInput"
+          :input="displayName"
+          :error="displayNameError"
+          @value="(val:string) => setDisplayName(val)"
           isRequired
         />
         <FloatingInput
           name="email"
           title="Email Address"
-          :input="inputs.email"
-          :error="errors.email"
-          @value="handleInput"
+          :input="email"
+          :error="emailError"
+          @value="(val:string) => setEmail(val)"
           isRequired
         />
         <FloatingInput
@@ -122,9 +71,9 @@ function handleInput({ name, value }: { name: string; value: string }) {
           showAndHidden
           autocomplete="false"
           isRequired
-          :input="inputs.password"
-          :error="errors.password"
-          @value="handleInput"
+          :input="password"
+          :error="passwordError"
+          @value="(val:string) => setPassword(val)"
         />
       </div>
       <div class="space-y-4 text-[13px] mt-6 mb-10 text-white/60">
@@ -141,7 +90,7 @@ function handleInput({ name, value }: { name: string; value: string }) {
         type="submit"
         :disabled="!validInput"
         class="w-full h-14 bg-epic-blue text-[13px] rounded uppercase font-bold disabled:cursor-default disabled:opacity-40 hover:brightness-110"
-      >Log in now</button>
+      >Register now</button>
     </form>
   </AuthWrapper>
 </template>

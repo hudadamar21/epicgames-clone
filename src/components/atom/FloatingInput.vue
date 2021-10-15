@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onBeforeMount } from "vue";
+import { ref, onBeforeMount, computed } from "vue";
 import EyeIcon from "../icons/EyeIcon.vue";
 import EyeOffIcon from "../icons/EyeOffIcon.vue";
 
@@ -18,6 +18,8 @@ interface Props {
 
 const props = defineProps<Props>();
 
+const propInput = computed(() => props.input)
+
 const elInput = ref(null);
 const showValue = ref(false);
 const type = ref("text");
@@ -34,7 +36,7 @@ function handleShowValue() {
 }
 
 function handleInput(e: any) {
-  emit("value", { name: props.name, value: e.target.value });
+  emit("value", e.target.value);
 }
 </script>
 
@@ -42,7 +44,7 @@ function handleInput(e: any) {
   <div class="relative w-full">
     <input
       @input="handleInput"
-      :value="input"
+      :value="propInput"
       :id="name"
       :type="type"
       ref="elInput"
@@ -56,11 +58,14 @@ function handleInput(e: any) {
     />
     <label
       :for="name"
-      :class="input ? '-translate-y-6 scale-90' : ''"
-      class="floating-label peer-focus:-translate-y-6 peer-focus:scale-90"
+      class="floating-label peer-focus:-translate-y-5 peer-focus:scale-90"
+      :class="propInput ? '-translate-y-5 scale-90' : '-translate-y-1/2'"
     >
       {{ title }}
-      <span v-show="isRequired" :class="error ? 'text-red-500' : 'text-red-400'">*</span>
+      <span 
+        v-show="isRequired" 
+        :class="error ? 'text-red-500' : 'text-red-400'"
+      >*</span>
     </label>
     <button
       v-if="showAndHidden"
@@ -70,7 +75,9 @@ function handleInput(e: any) {
       <EyeIcon v-if="showValue" class="w-6 h-6" />
       <EyeOffIcon v-else class="w-6 h-6" />
     </button>
-    <span class="absolute left-0 text-red-500 capitalize -bottom-5 text-xxs">{{ error }}</span>
+    <span class="absolute left-0 text-red-500 capitalize -bottom-5 text-xxs">
+      {{ error }}
+    </span>
   </div>
 </template>
 
@@ -85,7 +92,7 @@ function handleInput(e: any) {
 }
 .floating-label {
   @apply absolute left-5 top-1/2 
-      -translate-y-1/2 origin-left
+      origin-left
       text-[13px] text-white/80
       transition duration-200;
 }

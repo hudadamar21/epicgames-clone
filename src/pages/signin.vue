@@ -1,44 +1,16 @@
 <script setup lang="ts">
-import { reactive, ref, watch, computed } from "vue";
+import { ref, computed } from "vue";
 import Checkbox from "@/components/atom/Checkbox.vue";
-import AuthWrapper from "@/components/molecules/AuthWrapper.vue";
+import AuthWrapper from "@/components/templates/AuthWrapper.vue";
+import useRefValidation from "@/hooks/useRefValidation";
 
-interface Inputs {
-  [index: string]: string;
-  email: string;
-  password: string;
-}
-
-const inputs: Inputs = reactive({
-  email: "",
-  password: "",
-});
-
-const errors: Inputs = reactive({
-  email: "",
-  password: "",
-});
+const [ email, setEmail, emailError ] = useRefValidation()
+const [ password, setPassword, passwordError ] = useRefValidation()
 
 const rememberMe = ref(false);
 
-const validInput = computed(() => !!(inputs.email && inputs.password));
+const validInput = computed(() => !!(email.value && password.value));
 
-watch(
-  () => inputs.email,
-  () => {
-    errors.email = !inputs.email ? "required" : "";
-  }
-);
-watch(
-  () => inputs.password,
-  () => {
-    errors.password = !inputs.password ? "required" : "";
-  }
-);
-
-function handleInput({ name, value }: { name: string; value: string }) {
-  inputs[name] = value;
-}
 </script>
 
 <template>
@@ -48,9 +20,9 @@ function handleInput({ name, value }: { name: string; value: string }) {
         <FloatingInput
           name="email"
           title="Email Address"
-          :input="inputs.email"
-          :error="errors.email"
-          @value="handleInput"
+          :input="email"
+          :error="emailError"
+          @value="(val: string) => setEmail(val)"
         />
         <FloatingInput
           name="password"
@@ -58,9 +30,9 @@ function handleInput({ name, value }: { name: string; value: string }) {
           isPassword
           showAndHidden
           autocomplete="true"
-          :input="inputs.password"
-          :error="errors.password"
-          @value="handleInput"
+          :input="password"
+          :error="passwordError"
+          @value="(val: string) => setPassword(val)"
         />
       </div>
       <div class="flex items-center justify-between text-[13px] mt-6 mb-10">

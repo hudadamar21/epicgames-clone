@@ -15,14 +15,14 @@ defineProps<{
     </a>
     <div class="px-3">
       <div class="my-5">
-        <a href="#" class="block mb-3 text-base font-semibold">{{ title }}</a>
-        <p class="text-sm font-medium opacity-50">{{ description }}</p>
+        <a href="#" class="block mb-3">{{ title }}</a>
+        <p class="text-sm font-medium opacity-50 line-clamp-3">{{ description }}</p>
       </div>
-      <div v-if="isGame && price" class="text-base font-semibold">IDR {{ price }}</div>
+      <div v-if="isGame && price">IDR {{ price }}</div>
       <a
         v-else
         href="#"
-        class="text-base font-semibold border-b hover:border-b border-white/10 hover:border-white"
+        class="border-b hover:border-b border-white/10 hover:border-white"
       >Learn More</a>
     </div>
   </div>

@@ -18,8 +18,8 @@ import footerMenus from "@/data/footerMenus";
       </a>
     </div>
 
-    <div v-for="menu of footerMenus" class="mb-5 text-white">
-      <div class="mb-2 text-white/50">{{ menu.name }}</div>
+    <div v-for="menu of footerMenus" class="mb-5 text-white font-medium">
+      <div class="mb-2 text-white/50 font-semibold">{{ menu.name }}</div>
       <div class="flex flex-wrap items-center opacity-90">
         <ul v-for="(items, index) of menu.items" :key="index" class="pr-5">
           <li v-for="item of items" :key="item" class="menuitem">{{ item }}</li>

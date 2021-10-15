@@ -25,7 +25,7 @@ const handleSlideChange = (s: any) => {
 </script>
 
 <template>
-  <div class="flex flex-col md:flex-row h-[32rem] sm:h-[30rem] w-full">
+  <div class="flex flex-col md:flex-row h-[32rem] sm:h-[28rem] w-full">
     <Swiper
       v-bind="{
         spaceBetween: 10,
@@ -75,9 +75,6 @@ const handleSlideChange = (s: any) => {
 </template>
 
 <style>
-.discover-swiper .swiper-slide-thumb-active .hightlight-game-list {
-  @apply bg-epic-gray-200 rounded-2xl;
-}
 .swiper-pagination {
   @apply flex md:hidden items-center justify-center gap-1;
 }

@@ -28,8 +28,8 @@ const changeCountGameList = (e: any) => {
     <h2 class="mb-4 font-bold text-white/90">{{ title }}</h2>
     <div class="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-5">
       <GameCard
-        v-for="{ title, image, studio, price } of list"
-        v-bind="{ title, image, studio, price }"
+        v-for="list of list"
+        v-bind="list"
         :key="title"
       />
     </div>

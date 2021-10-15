@@ -11,7 +11,7 @@ import GameCard from "../molecules/GameCard.vue";
 
 <template>
   <div class="flex justify-between px-5 mt-12 mb-5 md:px-0">
-    <div class="flex items-center gap-1 font-semibold">
+    <div class="flex items-center gap-1 ">
       <h2>Game On Sale</h2>
       <button class="transition-transform hover:translate-x-1">
         <ArrowRight />

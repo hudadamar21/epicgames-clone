@@ -24,7 +24,7 @@ const gameList: IGame[] = [
     description:
       "Dishonored is an immersive first-person action game that casts you as a supernatural assassin driven by revenge.",
     price: "200.500",
-    studio: "Ubisoft",
+    studio: "Bethesda",
     discount: "-35%",
     discountPrice: "161.850",
   },
@@ -33,7 +33,7 @@ const gameList: IGame[] = [
     image: farcry6,
     status: "Coming October 7",
     description:
-      "Less than 3 weeks until launch! Pre-purchase to get a deadly Discos Locos weapon and an outfit for Chorizo, your canine companion.",
+      "Welcome to Yara. Antón Castillo is intent on restoring his nation back to its former glory by any means, a revolution.",
     price: "619.190",
     studio: "Ubisoft",
   },
@@ -55,7 +55,7 @@ const gameList: IGame[] = [
     description:
       "Immerse yourself in Little Nightmares, a dark whimsical tale that will confront you with your childhood fears! Help Six escape The Maw",
     price: "119.190",
-    studio: "Ubisoft",
+    studio: "Tarsier Studios",
   },
   {
     title: "Battlefield 2042",
@@ -64,7 +64,7 @@ const gameList: IGame[] = [
     description:
       "Don't miss a moment of the Battlefield 2042 Open Beta, start your pre-load now!",
     price: "659.000",
-    studio: "Ubisoft",
+    studio: "Electronic Arts",
   },
   {
     title: "Kena bridge of spirits",
@@ -73,7 +73,7 @@ const gameList: IGame[] = [
     description:
       "Kena, a young Spirit Guide, travels to an abandoned village in search of the sacred mountain shrine.",
     price: "659.000",
-    studio: "Ubisoft",
+    studio: "Ember Lab",
     discount: "-35%",
     discountPrice: "161.850",
   },

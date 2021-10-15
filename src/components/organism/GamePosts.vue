@@ -6,8 +6,9 @@ import SwiperCore, { Pagination } from "swiper";
 import "swiper/css";
 SwiperCore.use([Pagination]);
 
-defineProps<{
+const props = defineProps<{
   posts: IGame[];
+  slidePerView?: number
 }>();
 
 const swiperOption = {
@@ -17,7 +18,7 @@ const swiperOption = {
   breakpoints: {
     768: {
       pagination: false,
-      slidesPerView: 2,
+      slidesPerView: props.slidePerView || 2,
     },
   },
 };

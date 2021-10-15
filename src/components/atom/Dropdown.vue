@@ -18,7 +18,7 @@ const changeSelected = (list: string) => {
 <template>
   <Menu as="div" class="relative" v-slot="{ open }">
     <MenuButton
-      class="group relative flex items-center gap-2 text-[13px] md:text-sm font-normal md:font-semibold"
+      class="group relative flex items-center gap-2 text-[13px] md:text-sm"
     >
       <span class="text-white/60">{{ name }}:</span>
       <span class="flex items-center">
@@ -33,7 +33,7 @@ const changeSelected = (list: string) => {
           v-for="list of lists"
           :key="list"
           @click="changeSelected(list)"
-          class="hover:underline font-semibold text-[13px] hover:text-white cursor-pointer"
+          class="hover:underline text-[13px] hover:text-white cursor-pointer"
           :class="selectedName === list ? 'text-white' : 'text-white/50'"
         >{{ list }}</MenuItem>
       </ul>

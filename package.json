@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@headlessui/vue": "^1.4.1",
+    "@tailwindcss/line-clamp": "^0.2.2",
     "swiper": "^7.0.8",
     "vue": "^3.2.13",
     "vue-router": "^4.0.11"

@@ -21,7 +21,7 @@ const selectedName = ref(props.defaultSelected || '');
     class="relative w-full p-1 px-5 border rounded-md border-white/30"
   >
     <ListboxButton
-      class="relative flex items-center justify-between w-full gap-2 py-3 text-base group"
+      class="relative flex items-center justify-between w-full gap-2 py-3 text-sm group"
     >
       <div class="text-left">
         <div class="text-white/60">
@@ -43,7 +43,7 @@ const selectedName = ref(props.defaultSelected || '');
         v-slot="{ selected }"
       >
         <li 
-          class="px-5 py-3 text-base font-semibold text-white cursor-pointer hover:bg-white/20"
+          class="px-5 py-3 text-sm text-white cursor-pointer hover:bg-white/20"
           :class="selected  && 'bg-white/10'"
         >
           {{ list }}

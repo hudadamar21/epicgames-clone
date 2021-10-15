@@ -10,8 +10,8 @@ defineProps<{
 </script>
 
 <template>
-  <div class="text-sm cursor-pointer group focus:bg-epic-gray-50">
-    <div class="relative w-full mb-2 overflow-hidden rounded-md ar-3/4 bg-white/80">
+  <div class="text-sm font-medium cursor-pointer group focus:bg-epic-gray-50">
+    <div class="relative w-full mb-1.5 overflow-hidden rounded-md ar-3/4 bg-white/80">
       <img
         :src="image"
         class="object-cover w-full h-full transition-opacity duration-200 hover:opacity-90"
@@ -20,7 +20,7 @@ defineProps<{
         <AddIcon class="w-5 h-5" />
       </div>
     </div>
-    <div class="py-3 text-sm">
+    <div class="py-4">
       <div class="truncate mb-0.5">{{ title }}</div>
       <div class="text-white/50">{{ studio }}</div>
     </div>

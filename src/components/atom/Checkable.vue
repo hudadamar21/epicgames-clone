@@ -9,7 +9,7 @@ defineProps<{
 <template>
   <button
     @click="$emit('checked', value)"
-    class="flex items-center justify-between w-full p-3 text-sm font-semibold rounded cursor-pointer"
+    class="flex items-center justify-between w-full p-3 text-sm  rounded cursor-pointer"
     :class="
       value.checked
         ? 'bg-epic-gray-50 text-white'

@@ -55,7 +55,7 @@ const isMenuOpen = ref(false);
 .nav-menu-list {
   @apply flex flex-col md:flex-row 
       uppercase 
-      text-xs md:text-[10.5px] font-semibold 
+      text-xs md:text-[10.5px]  
       divide-y md:divide-none divide-white/5;
 }
 

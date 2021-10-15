@@ -9,7 +9,7 @@ import { freeGames } from "@/data/gameList";
     <div class="flex items-center justify-between px-5 mb-6">
       <div class="flex items-center gap-3">
         <IconGift class="w-8 h-8" />
-        <h2 class="text-lg font-semibold">Free Games</h2>
+        <h2 class="text-lg ">Free Games</h2>
       </div>
       <button class="px-4 py-2 text-xs font-bold uppercase border rounded">View More</button>
     </div>
@@ -36,7 +36,7 @@ import { freeGames } from "@/data/gameList";
               :class="game.freeNow ? 'bg-epic-blue' : 'bg-black'"
             >{{ game.freeNow ? "Free Now" : "Coming Soon" }}</div>
           </div>
-          <div class="mt-4 text-sm font-semibold tracking-tight">
+          <div class="mt-4 text-sm  tracking-tight">
             <div>{{ game.title }}</div>
             <div class="opacity-60">Free {{ game.rangeDate }}</div>
           </div>

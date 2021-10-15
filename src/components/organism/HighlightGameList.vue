@@ -48,12 +48,15 @@ const timerDelayed = () => {
         class="object-cover w-12 rounded-lg select-none bg-epic-blue h-14 md:h-full"
         alt="cover-game"
       />
-      <p class="flex-grow text-xs font-semibold text-left">{{ title }}</p>
+      <p class="flex-grow text-xs  text-left">{{ title }}</p>
     </div>
   </li>
 </template>
 
 <style>
+.discover-swiper .swiper-slide-thumb-active .hightlight-game-list {
+  @apply bg-epic-gray-200 rounded-2xl;
+}
 .hightlight-game-list {
   @apply relative h-full px-2.5 py-2 overflow-hidden rounded-2xl hover:bg-epic-gray-200 transition duration-200 cursor-pointer md:w-48;
 }

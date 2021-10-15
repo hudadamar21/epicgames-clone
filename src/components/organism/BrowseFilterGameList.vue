@@ -9,14 +9,14 @@ defineProps<{
 <template>
   <div>
     <div
-      class="grid grid-cols-2 pb-4 text-sm font-semibold border-b border-white/10"
+      class="grid grid-cols-2 pb-4 text-sm  border-b border-white/10"
       :class="paddingx || 'px-1'"
     >
       <h2>Filter ({{ filterCheckedCount }})</h2>
       <button
         v-if="filterCheckedCount > 0"
         @click="ResetFilter"
-        class="hidden w-full h-full text-xs font-semibold uppercase md:block"
+        class="hidden w-full h-full text-xs  uppercase md:block"
       >Reset</button>
     </div>
     <div class="min-h-60">

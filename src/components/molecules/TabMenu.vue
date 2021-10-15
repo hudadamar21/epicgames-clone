@@ -34,14 +34,14 @@ const { tabMenuIndex } = toRefs(state);
     <Tab v-slot="{ selected }" as="template">
       <button
         @click="resetState"
-        class="font-semibold hover:text-white"
+        class=" hover:text-white"
         :class="!selected && 'text-white/40'"
       >Discover</button>
     </Tab>
     <Tab v-slot="{ selected }" as="template">
       <button
         @click="resetState"
-        class="font-semibold hover:text-white"
+        class=" hover:text-white"
         :class="!selected && 'text-white/40'"
       >Browse</button>
     </Tab>

@@ -5,10 +5,10 @@ import { dummyGameList } from "@/data/gameList";
 <template>
   <HighlightGame />
   <GameOnSale />
-  <GamePosts :posts="dummyGameList.slice(0, 2)" />
+  <GamePosts :posts="dummyGameList.slice(0, 3)" :slidePerView="3" />
   <FreeGames />
   <GamesWithStatus />
-  <GamePosts :posts="dummyGameList.slice(2, 4)" />
+  <GamePosts :posts="dummyGameList.slice(3, 5)" />
   <GameList title="Recently Updated" />
   <GameList title="New To The Epic Games Store" />
   <GameList title="Most Popular" />
@@ -19,8 +19,8 @@ import { dummyGameList } from "@/data/gameList";
     >
       <img src="@/assets/images/games/game-collection.png" class="w-full" alt="game collection" />
     </a>
-    <div class="text-sm font-semibold">
-      <h2 class="mb-2.5 lg:mb-4 text-lg lg:text-sm">Browse</h2>
+    <div class="text-sm ">
+      <h2 class="mb-2.5 lg:mb-4 text-lg md:text-base">Browse</h2>
       <p class="mb-10 opacity-60">Explore our catalog for your next favorite game!</p>
       <a
         href="#"

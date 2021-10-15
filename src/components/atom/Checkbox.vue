@@ -1,25 +1,25 @@
 <script setup lang="ts">
-  import { Switch, SwitchGroup, SwitchLabel } from "@headlessui/vue";
-  defineProps<{
-    value: boolean,
-    label: string
-  }>()
+import { Switch, SwitchGroup, SwitchLabel } from "@headlessui/vue";
+defineProps<{
+  value: boolean;
+}>();
 </script>
 
 <template>
   <SwitchGroup>
-    <div class="grid grid-flow-col justify-start items-center">
-      <div class="h-5 w-5">
+    <div class="grid items-center justify-start grid-flow-col">
+      <div class="w-5 h-5">
         <Switch
           v-model="value"
           :class="value ? 'bg-epic-blue border-black' : 'bg-transparent'"
-          class="border h-full w-full ring-8 ring-transparent hover:ring-white/10 grid place-items-center focus:outline-none"
+          class="grid w-full h-full border ring-8 ring-transparent hover:ring-white/10 place-items-center focus:outline-none"
         >
-          <CheckIcon v-show="value"/>
+          <CheckIcon v-show="value" />
         </Switch>
       </div>
-      <SwitchLabel class="ml-4 cursor-pointer flex-grow">{{ label }}</SwitchLabel>
+      <SwitchLabel class="flex-grow ml-4 cursor-pointer">
+        <slot />
+      </SwitchLabel>
     </div>
   </SwitchGroup>
-  
 </template>

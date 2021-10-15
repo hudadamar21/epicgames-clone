@@ -14,7 +14,7 @@
 </template>
 
 <style>
-  .pagination-link {
-    @apply text-white/50 hover:text-white cursor-pointer py-2 px-3
-  }
+.pagination-link {
+  @apply text-white/50 hover:text-white cursor-pointer py-2 px-3;
+}
 </style>

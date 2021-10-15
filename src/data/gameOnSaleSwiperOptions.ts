@@ -1,7 +1,7 @@
 const swiperOptions = {
   navigation: {
-    prevEl: '.gameonsale-prev',
-    nextEl: '.gameonsale-next'
+    prevEl: ".gameonsale-prev",
+    nextEl: ".gameonsale-next",
   },
   spaceBetween: 20,
   breakpoints: {
@@ -27,8 +27,8 @@ const swiperOptions = {
     1280: {
       slidesPerGroup: 5,
       slidesPerView: 6,
-    }
-  }
-}
+    },
+  },
+};
 
-export default swiperOptions
+export default swiperOptions;

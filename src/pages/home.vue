@@ -1,32 +1,34 @@
 <script setup lang="ts">
-  import { TabGroup, TabList, TabPanels, TabPanel } from '@headlessui/vue'
-  import { state } from "@/store";
+import { TabGroup, TabList, TabPanels, TabPanel } from "@headlessui/vue";
+import { state } from "@/store";
 
-  const changeTab = (tabIndex: any) => {
-    window.scrollTo(0,0)
-    state.tabMenuIndex = tabIndex
-  }
+const changeTab = (tabIndex: any) => {
+  window.scrollTo(0, 0);
+  state.tabMenuIndex = tabIndex;
+};
 </script>
 
 <template>
   <MainLayout>
     <main class="py-13 md:ml-6">
       <TabGroup @change="changeTab">
-        <div class="md:container sticky top-13 h-20 lg:h-24 z-30">
-          <TabList class="h-full flex items-center justify-between bg-epic-black/90 backdrop-blur  px-5 md:px-0 border-b border-white/10 md:border-transparent">
-            <TabMenu/>
-            <SearchInput/>
-            <MobileSearch/>
-            <MobileTabMenu/>
+        <div class="sticky z-30 h-20 md:container top-13 lg:h-24">
+          <TabList
+            class="flex items-center justify-between h-full px-5 border-b bg-epic-black/90 backdrop-blur md:px-0 border-white/10 md:border-transparent"
+          >
+            <TabMenu />
+            <SearchInput />
+            <MobileSearch />
+            <MobileTabMenu />
           </TabList>
         </div>
         <div class="md:container">
-          <TabPanels class="text-white mt-5 md:mt-0">
+          <TabPanels class="mt-5 text-white md:mt-0">
             <TabPanel>
-              <Discover/>
+              <Discover />
             </TabPanel>
             <TabPanel>
-              <Browse/>
+              <Browse />
             </TabPanel>
           </TabPanels>
         </div>

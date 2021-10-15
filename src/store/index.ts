@@ -1,10 +1,10 @@
-import { reactive } from "vue"
+import { reactive } from "vue";
 
 interface State {
-  showMobileSearch: boolean,
-  showMobileTabMenu: boolean,
-  showOverlay: boolean
-  tabMenuIndex: number,
+  showMobileSearch: boolean;
+  showMobileTabMenu: boolean;
+  showOverlay: boolean;
+  tabMenuIndex: number;
 }
 
 export const state = reactive<State>({
@@ -12,10 +12,10 @@ export const state = reactive<State>({
   showMobileTabMenu: false,
   showOverlay: false,
   tabMenuIndex: 0,
-})
+});
 
 export const resetState = () => {
-  state.showMobileSearch = false
-  state.showMobileTabMenu = false
-  state.showOverlay = false
-}
+  state.showMobileSearch = false;
+  state.showMobileTabMenu = false;
+  state.showOverlay = false;
+};

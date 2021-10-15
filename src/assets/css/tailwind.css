@@ -4,8 +4,9 @@
 
 @layer base {
   html {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     scroll-behavior: smooth;
+    color: #f5f5f5;
   }
 }
 
@@ -17,7 +18,7 @@
 
 @layer utilities {
   .shadow-top {
-    box-shadow: 5px 0 15px rgba(0, 0, 0, .5);
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.5);
   }
   .ar-1 {
     aspect-ratio: 1/1;

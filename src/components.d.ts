@@ -2,53 +2,53 @@
 // We suggest you to commit this file into source control
 // Read more: https://github.com/vuejs/vue-next/pull/3399
 
-declare module 'vue' {
+declare module "vue" {
   export interface GlobalComponents {
-    AddIcon: typeof import('D:/HartD/Programing/Running Projects/epicegames-clone/src/components/icons/AddIcon.vue')['default']
-    ArrowDown: typeof import('D:/HartD/Programing/Running Projects/epicegames-clone/src/components/icons/ArrowDown.vue')['default']
-    ArrowLeft: typeof import('D:/HartD/Programing/Running Projects/epicegames-clone/src/components/icons/ArrowLeft.vue')['default']
-    ArrowRight: typeof import('D:/HartD/Programing/Running Projects/epicegames-clone/src/components/icons/ArrowRight.vue')['default']
-    ArrowUp: typeof import('D:/HartD/Programing/Running Projects/epicegames-clone/src/components/icons/ArrowUp.vue')['default']
-    BaseButton: typeof import('D:/HartD/Programing/Running Projects/epicegames-clone/src/components/atom/BaseButton.vue')['default']
-    BigCard: typeof import('D:/HartD/Programing/Running Projects/epicegames-clone/src/components/molecules/BigCard.vue')['default']
-    Browse: typeof import('D:/HartD/Programing/Running Projects/epicegames-clone/src/components/templates/Browse.vue')['default']
-    BrowseFilterGameList: typeof import('D:/HartD/Programing/Running Projects/epicegames-clone/src/components/organism/BrowseFilterGameList.vue')['default']
-    Checkable: typeof import('D:/HartD/Programing/Running Projects/epicegames-clone/src/components/atom/Checkable.vue')['default']
-    CheckIcon: typeof import('D:/HartD/Programing/Running Projects/epicegames-clone/src/components/icons/CheckIcon.vue')['default']
-    Collapse: typeof import('D:/HartD/Programing/Running Projects/epicegames-clone/src/components/molecules/Collapse.vue')['default']
-    CrossIcon: typeof import('D:/HartD/Programing/Running Projects/epicegames-clone/src/components/icons/CrossIcon.vue')['default']
-    Discover: typeof import('D:/HartD/Programing/Running Projects/epicegames-clone/src/components/templates/Discover.vue')['default']
-    Dropdown: typeof import('D:/HartD/Programing/Running Projects/epicegames-clone/src/components/atom/Dropdown.vue')['default']
-    EpicGames: typeof import('D:/HartD/Programing/Running Projects/epicegames-clone/src/components/icons/EpicGames.vue')['default']
-    Facebook: typeof import('D:/HartD/Programing/Running Projects/epicegames-clone/src/components/icons/Facebook.vue')['default']
-    Footer: typeof import('D:/HartD/Programing/Running Projects/epicegames-clone/src/components/templates/Footer.vue')['default']
-    FreeGames: typeof import('D:/HartD/Programing/Running Projects/epicegames-clone/src/components/organism/FreeGames.vue')['default']
-    GameCard: typeof import('D:/HartD/Programing/Running Projects/epicegames-clone/src/components/molecules/GameCard.vue')['default']
-    GameList: typeof import('D:/HartD/Programing/Running Projects/epicegames-clone/src/components/organism/GameList.vue')['default']
-    GameOnSale: typeof import('D:/HartD/Programing/Running Projects/epicegames-clone/src/components/organism/GameOnSale.vue')['default']
-    GamesWithStatus: typeof import('D:/HartD/Programing/Running Projects/epicegames-clone/src/components/organism/GamesWithStatus.vue')['default']
-    Globe: typeof import('D:/HartD/Programing/Running Projects/epicegames-clone/src/components/icons/Globe.vue')['default']
-    HamburgerMenu: typeof import('D:/HartD/Programing/Running Projects/epicegames-clone/src/components/icons/HamburgerMenu.vue')['default']
-    HighlightGame: typeof import('D:/HartD/Programing/Running Projects/epicegames-clone/src/components/organism/HighlightGame.vue')['default']
-    HighlightGameImage: typeof import('D:/HartD/Programing/Running Projects/epicegames-clone/src/components/organism/HighlightGameImage.vue')['default']
-    HighlightGameList: typeof import('D:/HartD/Programing/Running Projects/epicegames-clone/src/components/organism/HighlightGameList.vue')['default']
-    IconGift: typeof import('D:/HartD/Programing/Running Projects/epicegames-clone/src/components/icons/IconGift.vue')['default']
-    Logo: typeof import('D:/HartD/Programing/Running Projects/epicegames-clone/src/components/atom/Logo.vue')['default']
-    MainLayout: typeof import('D:/HartD/Programing/Running Projects/epicegames-clone/src/components/layouts/MainLayout.vue')['default']
-    MenuItem: typeof import('D:/HartD/Programing/Running Projects/epicegames-clone/src/components/atom/MenuItem.vue')['default']
-    MobileSearch: typeof import('D:/HartD/Programing/Running Projects/epicegames-clone/src/components/molecules/MobileSearch.vue')['default']
-    MobileTabMenu: typeof import('D:/HartD/Programing/Running Projects/epicegames-clone/src/components/molecules/MobileTabMenu.vue')['default']
-    Navbar: typeof import('D:/HartD/Programing/Running Projects/epicegames-clone/src/components/templates/Navbar.vue')['default']
-    Overlay: typeof import('D:/HartD/Programing/Running Projects/epicegames-clone/src/components/atom/Overlay.vue')['default']
-    Search: typeof import('D:/HartD/Programing/Running Projects/epicegames-clone/src/components/icons/Search.vue')['default']
-    SearchInput: typeof import('D:/HartD/Programing/Running Projects/epicegames-clone/src/components/atom/SearchInput.vue')['default']
-    TabMenu: typeof import('D:/HartD/Programing/Running Projects/epicegames-clone/src/components/molecules/TabMenu.vue')['default']
-    ToggleMenu: typeof import('D:/HartD/Programing/Running Projects/epicegames-clone/src/components/atom/ToggleMenu.vue')['default']
-    Twitter: typeof import('D:/HartD/Programing/Running Projects/epicegames-clone/src/components/icons/Twitter.vue')['default']
-    UnrealEngine: typeof import('D:/HartD/Programing/Running Projects/epicegames-clone/src/components/icons/UnrealEngine.vue')['default']
-    User: typeof import('D:/HartD/Programing/Running Projects/epicegames-clone/src/components/icons/User.vue')['default']
-    Youtube: typeof import('D:/HartD/Programing/Running Projects/epicegames-clone/src/components/icons/Youtube.vue')['default']
+    AddIcon: typeof import("D:/HartD/Programing/Running Projects/epicegames-clone/src/components/icons/AddIcon.vue")["default"];
+    ArrowDown: typeof import("D:/HartD/Programing/Running Projects/epicegames-clone/src/components/icons/ArrowDown.vue")["default"];
+    ArrowLeft: typeof import("D:/HartD/Programing/Running Projects/epicegames-clone/src/components/icons/ArrowLeft.vue")["default"];
+    ArrowRight: typeof import("D:/HartD/Programing/Running Projects/epicegames-clone/src/components/icons/ArrowRight.vue")["default"];
+    ArrowUp: typeof import("D:/HartD/Programing/Running Projects/epicegames-clone/src/components/icons/ArrowUp.vue")["default"];
+    BaseButton: typeof import("D:/HartD/Programing/Running Projects/epicegames-clone/src/components/atom/BaseButton.vue")["default"];
+    BigCard: typeof import("D:/HartD/Programing/Running Projects/epicegames-clone/src/components/molecules/BigCard.vue")["default"];
+    Browse: typeof import("D:/HartD/Programing/Running Projects/epicegames-clone/src/components/templates/Browse.vue")["default"];
+    BrowseFilterGameList: typeof import("D:/HartD/Programing/Running Projects/epicegames-clone/src/components/organism/BrowseFilterGameList.vue")["default"];
+    Checkable: typeof import("D:/HartD/Programing/Running Projects/epicegames-clone/src/components/atom/Checkable.vue")["default"];
+    CheckIcon: typeof import("D:/HartD/Programing/Running Projects/epicegames-clone/src/components/icons/CheckIcon.vue")["default"];
+    Collapse: typeof import("D:/HartD/Programing/Running Projects/epicegames-clone/src/components/molecules/Collapse.vue")["default"];
+    CrossIcon: typeof import("D:/HartD/Programing/Running Projects/epicegames-clone/src/components/icons/CrossIcon.vue")["default"];
+    Discover: typeof import("D:/HartD/Programing/Running Projects/epicegames-clone/src/components/templates/Discover.vue")["default"];
+    Dropdown: typeof import("D:/HartD/Programing/Running Projects/epicegames-clone/src/components/atom/Dropdown.vue")["default"];
+    EpicGames: typeof import("D:/HartD/Programing/Running Projects/epicegames-clone/src/components/icons/EpicGames.vue")["default"];
+    Facebook: typeof import("D:/HartD/Programing/Running Projects/epicegames-clone/src/components/icons/Facebook.vue")["default"];
+    Footer: typeof import("D:/HartD/Programing/Running Projects/epicegames-clone/src/components/templates/Footer.vue")["default"];
+    FreeGames: typeof import("D:/HartD/Programing/Running Projects/epicegames-clone/src/components/organism/FreeGames.vue")["default"];
+    GameCard: typeof import("D:/HartD/Programing/Running Projects/epicegames-clone/src/components/molecules/GameCard.vue")["default"];
+    GameList: typeof import("D:/HartD/Programing/Running Projects/epicegames-clone/src/components/organism/GameList.vue")["default"];
+    GameOnSale: typeof import("D:/HartD/Programing/Running Projects/epicegames-clone/src/components/organism/GameOnSale.vue")["default"];
+    GamesWithStatus: typeof import("D:/HartD/Programing/Running Projects/epicegames-clone/src/components/organism/GamesWithStatus.vue")["default"];
+    Globe: typeof import("D:/HartD/Programing/Running Projects/epicegames-clone/src/components/icons/Globe.vue")["default"];
+    HamburgerMenu: typeof import("D:/HartD/Programing/Running Projects/epicegames-clone/src/components/icons/HamburgerMenu.vue")["default"];
+    HighlightGame: typeof import("D:/HartD/Programing/Running Projects/epicegames-clone/src/components/organism/HighlightGame.vue")["default"];
+    HighlightGameImage: typeof import("D:/HartD/Programing/Running Projects/epicegames-clone/src/components/organism/HighlightGameImage.vue")["default"];
+    HighlightGameList: typeof import("D:/HartD/Programing/Running Projects/epicegames-clone/src/components/organism/HighlightGameList.vue")["default"];
+    IconGift: typeof import("D:/HartD/Programing/Running Projects/epicegames-clone/src/components/icons/IconGift.vue")["default"];
+    Logo: typeof import("D:/HartD/Programing/Running Projects/epicegames-clone/src/components/atom/Logo.vue")["default"];
+    MainLayout: typeof import("D:/HartD/Programing/Running Projects/epicegames-clone/src/components/layouts/MainLayout.vue")["default"];
+    MenuItem: typeof import("D:/HartD/Programing/Running Projects/epicegames-clone/src/components/atom/MenuItem.vue")["default"];
+    MobileSearch: typeof import("D:/HartD/Programing/Running Projects/epicegames-clone/src/components/molecules/MobileSearch.vue")["default"];
+    MobileTabMenu: typeof import("D:/HartD/Programing/Running Projects/epicegames-clone/src/components/molecules/MobileTabMenu.vue")["default"];
+    Navbar: typeof import("D:/HartD/Programing/Running Projects/epicegames-clone/src/components/templates/Navbar.vue")["default"];
+    Overlay: typeof import("D:/HartD/Programing/Running Projects/epicegames-clone/src/components/atom/Overlay.vue")["default"];
+    Search: typeof import("D:/HartD/Programing/Running Projects/epicegames-clone/src/components/icons/Search.vue")["default"];
+    SearchInput: typeof import("D:/HartD/Programing/Running Projects/epicegames-clone/src/components/atom/SearchInput.vue")["default"];
+    TabMenu: typeof import("D:/HartD/Programing/Running Projects/epicegames-clone/src/components/molecules/TabMenu.vue")["default"];
+    ToggleMenu: typeof import("D:/HartD/Programing/Running Projects/epicegames-clone/src/components/atom/ToggleMenu.vue")["default"];
+    Twitter: typeof import("D:/HartD/Programing/Running Projects/epicegames-clone/src/components/icons/Twitter.vue")["default"];
+    UnrealEngine: typeof import("D:/HartD/Programing/Running Projects/epicegames-clone/src/components/icons/UnrealEngine.vue")["default"];
+    User: typeof import("D:/HartD/Programing/Running Projects/epicegames-clone/src/components/icons/User.vue")["default"];
+    Youtube: typeof import("D:/HartD/Programing/Running Projects/epicegames-clone/src/components/icons/Youtube.vue")["default"];
   }
 }
 
-export { }
+export { };

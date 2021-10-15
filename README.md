@@ -5,13 +5,15 @@ This template should help get you started developing with Vue 3, Typescript and 
 check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
 USE:
+
 - [x] Vue 3
 - [x] Vite
 - [x] Typescript
 - [x] Tailwindcss
 
 FEATURE:
-- [x] Absolute path with '@/*'
+
+- [x] Absolute path with '@/\*'
 - [x] Auto Import Component using [unplugin-vue-components](https://github.com/antfu/unplugin-vue-components)
 
 ## Recommended IDE Setup

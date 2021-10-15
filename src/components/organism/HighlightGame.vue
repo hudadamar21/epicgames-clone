@@ -1,28 +1,27 @@
 <script setup lang="ts">
-import { ref } from "vue"
-import { highlightGames } from "@/data/gameList"
-import { HIGHLIGHT_GAME_AUTOPLAY_DELAY } from "@/constant"
+import { ref } from "vue";
+import { highlightGames } from "@/data/gameList";
+import { HIGHLIGHT_GAME_AUTOPLAY_DELAY } from "@/constant";
 
 // Swiper
-import { Swiper, SwiperSlide } from 'swiper/vue';
-import SwiperCore, { Autoplay, Thumbs, Pagination } from 'swiper';
-import 'swiper/css';
-import "swiper/css/thumbs"
-import "swiper/css/pagination"
+import { Swiper, SwiperSlide } from "swiper/vue";
+import SwiperCore, { Autoplay, Thumbs, Pagination } from "swiper";
+import "swiper/css";
+import "swiper/css/thumbs";
+import "swiper/css/pagination";
 SwiperCore.use([Autoplay, Thumbs, Pagination]);
 
-const thumbsSwiper = ref(null)
-const autoplayDelay = ref(HIGHLIGHT_GAME_AUTOPLAY_DELAY)
-const activeIndex = ref(0)
+const thumbsSwiper = ref(null);
+const autoplayDelay = ref(HIGHLIGHT_GAME_AUTOPLAY_DELAY);
+const activeIndex = ref(0);
 
 function setThumbsSwiper(swiper: any) {
   thumbsSwiper.value = swiper;
 }
 
 const handleSlideChange = (s: any) => {
-  activeIndex.value = s.activeIndex
-}
-
+  activeIndex.value = s.activeIndex;
+};
 </script>
 
 <template>
@@ -34,18 +33,18 @@ const handleSlideChange = (s: any) => {
         thumbs: { swiper: thumbsSwiper },
         autoplay: {
           delay: autoplayDelay,
-          disableOnInteraction: false
+          disableOnInteraction: false,
         },
         breakpoints: {
-          768: { pagination: false }
+          768: { pagination: false },
         },
         pagination: { clickable: true },
       }"
       @slideChange="handleSlideChange"
       class="w-full md:w-[80%] h-full pl-5 md:pl-0 pr-5 md:pr-0 pb-8 md:pb-0 cursor-pointer"
     >
-      <SwiperSlide 
-        v-for="{ image, title, status, description, price } of highlightGames" 
+      <SwiperSlide
+        v-for="{ image, title, status, description, price } of highlightGames"
         :key="title"
       >
         <HighlightGameImage v-bind="{ image, title, status, description, price }" />
@@ -59,24 +58,20 @@ const handleSlideChange = (s: any) => {
         autoplay: {
           delay: 7000,
         },
-        watchSlidesProgress: true
+        watchSlidesProgress: true,
       }"
-      @swiper="setThumbsSwiper" 
-      class="hidden md:block discover-swiper h-full w-max pl-4 cursor-pointer"
+      @swiper="setThumbsSwiper"
+      class="hidden h-full pl-4 cursor-pointer md:block discover-swiper w-max"
     >
-      <SwiperSlide 
-        v-for="({ image, title }, index) of highlightGames" 
-        :key="title"
-      >
-        <HighlightGameList 
-          :activeIndex="activeIndex" 
-          :isActive="index === activeIndex" 
-          v-bind="{image, title}" 
+      <SwiperSlide v-for="({ image, title }, index) of highlightGames" :key="title">
+        <HighlightGameList
+          :activeIndex="activeIndex"
+          :isActive="index === activeIndex"
+          v-bind="{ image, title }"
         />
       </SwiperSlide>
     </Swiper>
   </div>
-  
 </template>
 
 <style>
@@ -91,6 +86,6 @@ const handleSlideChange = (s: any) => {
   @apply bg-white;
 }
 .swiper-pagination .swiper-pagination-bullet {
-  @apply bg-white/50 w-1.5 h-1.5 ;
+  @apply bg-white/50 w-1.5 h-1.5;
 }
 </style>

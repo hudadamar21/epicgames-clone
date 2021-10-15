@@ -1,39 +1,19 @@
 const footerMenus = [
   {
-    name: 'Resources',
+    name: "Resources",
     items: [
-      [
-        "Support-A-Content",
-        "Publish On Epic Games",
-        "Career",
-      ],
-      [
-        "Company",
-        "Fan Art Policy",
-        "UX Research",
-      ],
-      [
-        "Store EULA",
-        "Online Services",
-        "Community Rules",
-      ]
-    ]
+      ["Support-A-Content", "Publish On Epic Games", "Career"],
+      ["Company", "Fan Art Policy", "UX Research"],
+      ["Store EULA", "Online Services", "Community Rules"],
+    ],
   },
   {
-    name: 'Made By Epic Games',
+    name: "Made By Epic Games",
     items: [
-      [
-        "Battle Breakers",
-        "Fortnite",
-        "Infinity Blade",
-      ],
-      [
-        "Shadow Complex",
-        "Spyjinx",
-        "Unreal Tournament",
-      ]
-    ]
-  }
-]
+      ["Battle Breakers", "Fortnite", "Infinity Blade"],
+      ["Shadow Complex", "Spyjinx", "Unreal Tournament"],
+    ],
+  },
+];
 
-export default footerMenus
+export default footerMenus;

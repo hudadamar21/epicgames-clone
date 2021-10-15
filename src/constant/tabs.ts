@@ -1,4 +1,4 @@
 export enum Tabs {
-    Discover,
-    Browse
+  Discover,
+  Browse,
 }

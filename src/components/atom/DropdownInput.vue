@@ -1,42 +1,54 @@
 <script setup lang="ts">
-  import { ref } from "vue"
-  import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/vue";
+import { ref } from "vue";
+import { Listbox, ListboxButton, ListboxOptions, ListboxOption } from "@headlessui/vue";
 
-  const props = defineProps<{
-    name: string,
-    open?: boolean,
-    lists: string[]
-  }>()
+const props = defineProps<{
+  name: string;
+  open?: boolean;
+  lists: string[];
+  defaultSelected: string;
+  isRequired?: boolean;
+}>();
 
-  const selectedName = ref(props.lists[0])
-
-  const changeSelected = (list: string) => {
-    selectedName.value = list
-  }
+const selectedName = ref(props.defaultSelected || '');
 
 </script>
 
 <template>
-  <Menu as="div" class="relative w-full px-5 p-2 rounded-md border border-white/30" v-slot="{ open }">
-    <MenuButton class="group relative flex flex-col gap-2 text-base w-full">
-      <span class="text-white/60">{{ name }}:</span> 
-      <div class="flex items-center justify-between w-full">
-        {{ selectedName }}
-        <ArrowDown :class="open && '-rotate-180'" class="w-4 h-4 transition duration-200" />
+  <Listbox
+    v-model="selectedName"
+    as="div"
+    class="relative w-full p-1 px-5 border rounded-md border-white/30"
+  >
+    <ListboxButton
+      class="relative flex items-center justify-between w-full gap-2 py-3 text-base group"
+    >
+      <div class="text-left">
+        <div class="text-white/60">
+          {{ name }} 
+          <span v-show="isRequired" class="text-red-400">*</span>
+        </div>
+        <div>{{ selectedName }}</div>
       </div>
-    </MenuButton>
-    <MenuItems class="absolute top-full left-0 mt-1 z-10 max-h-[300px] overflow-auto w-full rounded">
-      <ul class="bg-epic-gray-50 py-3.5 w-full rounded shadow-lg">
-        <MenuItem 
-          as="li"
-          v-for="list of lists" 
-          :key="list"
-          @click="changeSelected(list)" 
-          class="font-semibold text-base px-5 py-3 hover:bg-white/20 cursor-pointer text-white"
+      <ArrowDown :class="open && '-rotate-180'" class="w-4 h-4 transition duration-200" />
+    </ListboxButton>
+    <ListboxOptions
+      class="absolute top-full left-0 mt-1 z-10 max-h-[300px] overflow-auto w-full rounded bg-epic-gray-50 py-3.5 shadow-lg"
+    >
+      <ListboxOption
+        as="template"
+        v-for="list of lists"
+        :key="list"
+        :value="list"
+        v-slot="{ selected }"
+      >
+        <li 
+          class="px-5 py-3 text-base font-semibold text-white cursor-pointer hover:bg-white/20"
+          :class="selected  && 'bg-white/10'"
         >
           {{ list }}
-        </MenuItem>
-      </ul>
-    </MenuItems>
-  </Menu>
+        </li>
+        </ListboxOption>
+    </ListboxOptions>
+  </Listbox>
 </template>

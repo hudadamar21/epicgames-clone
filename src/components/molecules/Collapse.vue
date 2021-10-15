@@ -1,33 +1,29 @@
 <script setup lang="ts">
-  import { ref } from "vue"
-  import { FilterValue } from "@/data/filter"
-  import { changeCheckedFilterValue } from "@/store/filter"
+import { ref } from "vue";
+import { FilterValue } from "@/data/filter";
+import { changeCheckedFilterValue } from "@/store/filter";
 
-  const props = defineProps<{
-    name: string,
-    lists: FilterValue[],
-    paddingx?: string
-  }>()
+const props = defineProps<{
+  name: string;
+  lists: FilterValue[];
+  paddingx?: string;
+}>();
 
-  const isOpen = ref(false)
+const isOpen = ref(false);
 
-  const handleCheckedValue = (value: FilterValue) => {
-    changeCheckedFilterValue(value, props.name)
-  }
-  
+const handleCheckedValue = (value: FilterValue) => {
+  changeCheckedFilterValue(value, props.name);
+};
 </script>
 
 <template>
-  <details class="text-xs border-b py-2 border-white/10" @toggle="isOpen = !isOpen">
-    <summary 
+  <details class="py-2 text-xs border-b border-white/10" @toggle="isOpen = !isOpen">
+    <summary
       :class="paddingx"
-      class="cursor-pointer px-3 py-4 uppercase font-bold text-white/60 hover:text-white flex items-center justify-between"
+      class="flex items-center justify-between px-3 py-4 font-bold uppercase cursor-pointer text-white/60 hover:text-white"
     >
       {{ name }}
-      <ArrowDown 
-        class="w-5 h-5 transition-duration duration-200" 
-        :class="isOpen && '-rotate-180'"
-      />
+      <ArrowDown class="w-5 h-5 duration-200 transition-duration" :class="isOpen && '-rotate-180'" />
     </summary>
     <div class="space-y-1" :class="paddingx ? `${paddingx} -mx-2` : ''">
       <Checkable
@@ -41,10 +37,10 @@
 </template>
 
 <style scoped>
-  details > summary {
-    list-style: none;
-  }
-  details > summary::-webkit-details-marker {
-    display: none;
-  }
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
 </style>
